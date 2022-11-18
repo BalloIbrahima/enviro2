@@ -1,0 +1,78 @@
+{
+  "name": "kubio/navigation",
+  "title": "Navigation",
+  "description": "If you've accidentally removed your navigation, you can re-add a navigation to your page with this block. The navigation block has 5 available layouts.",
+  "category": "kubio-layout",
+  "attributes": {
+    "kubio": {
+      "type": "object"
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "attrs": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "kubio": {
+      "elementsEnum": {
+        "NAVIGATION_CONTAINER": "outer",
+        "NAVIGATION_SECTION": "section",
+		"TYPOGRAPHY_HOLDERS": "typographyHolders"
+      },
+      "elementsByName": {
+        "outer": {
+          "wrapper": true,
+          "props": {
+            "className": []
+          }
+        },
+        "section": {
+          "ancestor": "sticky",
+          "default": true,
+          "selector": ".wp-block-kubio-navigation-section__nav"
+        },
+		"typographyHolders": {
+		    "selector": " > *"
+		}
+      },
+      "template": {
+        "type": "element",
+        "props": {
+          "name": "outer"
+        },
+        "children": [
+          {
+            "type": "wp:InnerBlocks"
+          }
+        ]
+      },
+      "default": {
+        "style": {
+          "descendants": {
+            "section": {
+              "animation": {
+                "duration": {
+                  "unit": "s",
+                  "value": 0.5
+                }
+              }
+            }
+          }
+        },
+        "props": {
+          "width": "boxed",
+          "verticalAlign": "center",
+          "overlap": false,
+          "sticky": false,
+          "stickyStartAt": "immediately",
+          "animation": {
+            "name": "slideDown"
+          }
+        }
+      }
+    },
+    "multiple": false
+  }
+}

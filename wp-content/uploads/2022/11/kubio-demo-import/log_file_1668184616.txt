@@ -1,0 +1,565 @@
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Prepare remote import
+
+
+---Downloaded files---
+The import files for: https://s3.us-west-2.amazonaws.com/static-assets.kubiobuilder.com/demo-sites/production/babysitter-free/content.kds were successfully downloaded!
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Executing before import step: init
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Executing before import step: prepare_templates
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Executing before import step: prepare_template_parts
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Executing before import step: prepare_menus
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Executing before import step: prepare_pages
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Imported "primary" (nav_menu)
+
+
+------
+[INFO] Imported "boy-child-childhood-235554-2-1" (Media)
+
+
+------
+[INFO] Imported "cropped-adult-baby-babysitter-698878-1" (Media)
+
+
+------
+[INFO] Imported "cropped-cropped-adorable-baby-babysitter-1257110-1.jpg" (Media)
+
+
+------
+[INFO] Imported "cropped-adorable-baby-babysitter-1257110-1 (1)" (Media)
+
+
+------
+[INFO] Imported "cropped-cropped-adorable-baby-babysitter-1257110-1-1.jpg" (Media)
+
+
+------
+[INFO] Imported "child-3046494_1920-1" (Media)
+
+
+------
+[INFO] Imported "child-cute-enjoyment-1257099-1 (1)" (Media)
+
+
+------
+[INFO] New AJAX call!
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[INFO] Imported "portrait-2865605_640" (Media)
+
+
+------
+[INFO] Imported "adorable-adult-baby-1648363-1" (Media)
+
+
+------
+[INFO] Imported "smile-1034157_640" (Media)
+
+
+------
+[INFO] Imported "baby-164897_1280" (Media)
+
+
+------
+[INFO] Imported "cropped-baby-164897_1280.jpg" (Media)
+
+
+------
+[INFO] Imported "cropped-portrait-2865605_640.jpg" (Media)
+
+
+------
+[INFO] Imported "cropped-smile-1034157_640.jpg" (Media)
+
+
+------
+[INFO] Imported "adorable-baby-beautiful-2224959" (Media)
+
+
+------
+[INFO] Imported "adorable-blonde-blur-1912868" (Media)
+
+
+------
+[INFO] Imported "boy-child-family-1650425" (Media)
+
+
+------
+[INFO] Imported "baby-boy-child-67663" (Media)
+
+
+------
+[INFO] Imported "adorable-beautiful-child-1650092" (Media)
+
+
+------
+[INFO] Imported "baby-boy-child-40998" (Media)
+
+
+------
+[INFO] Imported "Front Page" (Page)
+
+
+------
+[INFO] Imported "Blog" (Page)
+
+
+------
+[WARNING] Failed to import "": Invalid post type 
+
+
+------
+[INFO] Imported "african-african-american-afro-american-beautiful-black-1453701-pxhere.com_.jpg" (Media)
+
+
+------
+[INFO] Imported "About" (Page)
+
+
+------
+[INFO] Imported "contact" (Page)
+
+
+------
+[INFO] Imported "Home" (Navigation Menu Item)
+
+
+------
+[INFO] Imported "" (Navigation Menu Item)
+
+
+------
+[INFO] Imported "" (Navigation Menu Item)
+
+
+------
+[INFO] Imported "children-1869265_640-1" (Media)
+
+
+------
+[INFO] Imported "cropped-baby-164897_1280-150x150.jpg" (Media)
+
+
+------
+[INFO] Imported "adorable-adult-baby-1648363-1-150x150.jpg" (Media)
+
+
+------
+[INFO] Imported "cropped-portrait-2865605_640-150x150.jpg" (Media)
+
+
+------
+[INFO] Imported "cropped-smile-1034157_640-150x150.jpg" (Media)
+
+
+------
+[INFO] Imported "kubio-featured-image" (Media)
+
+
+------
+[INFO] New AJAX call!
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[WARNING] Failed to import "": Invalid post type 
+
+
+------
+[INFO] Imported "colibri-default-attachment" (Media)
+
+
+------
+[INFO] Imported "kubio-featured-image" (Media)
+
+
+------
+[INFO] Imported "Lorem ipsum" (Post)
+
+
+------
+[INFO] Imported "Lorem Ipsum" (Post)
+
+
+------
+[INFO] Imported "Lorem Ipsum" (Post)
+
+
+------
+[INFO] Imported "404" (Template)
+
+
+------
+[INFO] Imported "Archive Product" (Template)
+
+
+------
+[INFO] Imported "Front Page" (Template)
+
+
+------
+[INFO] Imported "Full Width" (Template)
+
+
+------
+[INFO] Imported "Index" (Template)
+
+
+------
+[INFO] Imported "Page" (Template)
+
+
+------
+[INFO] Imported "Search" (Template)
+
+
+------
+[INFO] Imported "Single Product" (Template)
+
+
+------
+[INFO] Imported "Single Post" (Template)
+
+
+------
+[INFO] Imported "Footer" (Template Part)
+
+
+------
+[INFO] Imported "Front Header" (Template Part)
+
+
+------
+[INFO] New AJAX call!
+
+
+------
+Warn: Unable set memory_limit
+
+------
+[WARNING] Failed to import "": Invalid post type 
+
+
+------
+[INFO] Imported "Header" (Template Part)
+
+
+------
+[INFO] Imported "Sidebar" (Template Part)
+
+
+------
+[INFO] Imported "Contact form 1" (Contact Form)
+
+
+------
+[INFO] Imported "Page With Left Sidebar" (Template)
+
+
+------
+[INFO] Imported "Page With Right Sidebar" (Template)
+
+
+------
+[INFO] Imported "Page Sidebar" (Template Part)
+
+
+------
+[INFO] Imported "Custom Styles" (Global Styles)
+
+
+------
+[INFO] Posts post processing
+
+
+------
+[INFO] Create term `elevate-wp` in `wp_theme`
+
+
+------
+[WARNING] Could not find the author for "boy-child-childhood-235554-2-1.jpg" (post #41)
+
+
+------
+[WARNING] Could not find the author for "cropped-adult-baby-babysitter-698878-1.jpg" (post #42)
+
+
+------
+[WARNING] Could not find the author for "cropped-cropped-adorable-baby-babysitter-1257110-1.jpg" (post #43)
+
+
+------
+[WARNING] Could not find the author for "cropped-adorable-baby-babysitter-1257110-1-1.jpg" (post #44)
+
+
+------
+[WARNING] Could not find the author for "cropped-cropped-adorable-baby-babysitter-1257110-1-1.jpg" (post #45)
+
+
+------
+[WARNING] Could not find the author for "child-3046494_1920-1.jpg" (post #46)
+
+
+------
+[WARNING] Could not find the author for "child-cute-enjoyment-1257099-1-1.jpg" (post #47)
+
+
+------
+[WARNING] Could not find the author for "portrait-2865605_640.jpg" (post #48)
+
+
+------
+[WARNING] Could not find the author for "adorable-adult-baby-1648363-1.jpg" (post #49)
+
+
+------
+[WARNING] Could not find the author for "smile-1034157_640.jpg" (post #50)
+
+
+------
+[WARNING] Could not find the author for "baby-164897_1280.jpg" (post #51)
+
+
+------
+[WARNING] Could not find the author for "cropped-baby-164897_1280.jpg" (post #52)
+
+
+------
+[WARNING] Could not find the author for "cropped-portrait-2865605_640.jpg" (post #53)
+
+
+------
+[WARNING] Could not find the author for "cropped-smile-1034157_640.jpg" (post #54)
+
+
+------
+[WARNING] Could not find the author for "adorable-baby-beautiful-2224959.jpg" (post #55)
+
+
+------
+[WARNING] Could not find the author for "adorable-blonde-blur-1912868.jpg" (post #56)
+
+
+------
+[WARNING] Could not find the author for "boy-child-family-1650425.jpg" (post #57)
+
+
+------
+[WARNING] Could not find the author for "baby-boy-child-67663.jpg" (post #58)
+
+
+------
+[WARNING] Could not find the author for "adorable-beautiful-child-1650092.jpg" (post #59)
+
+
+------
+[WARNING] Could not find the author for "baby-boy-child-40998.jpg" (post #60)
+
+
+------
+[WARNING] Could not find the author for "Front Page" (post #5)
+
+
+------
+[WARNING] Could not find the author for "Blog" (post #6)
+
+
+------
+[WARNING] Could not find the author for "african-african-american-afro-american-beautiful-black-1453701-pxhere.com_.jpg" (post #61)
+
+
+------
+[WARNING] Could not find the author for "About" (post #75)
+
+
+------
+[WARNING] Could not find the author for "contact" (post #76)
+
+
+------
+[WARNING] Could not find the author for "Home" (post #83)
+
+
+------
+[WARNING] Could not find the author for "" (post #86)
+
+
+------
+[WARNING] Could not find the author for "" (post #87)
+
+
+------
+[WARNING] Could not find the author for "children-1869265_640-1.jpg" (post #66)
+
+
+------
+[WARNING] Could not find the author for "cropped-baby-164897_1280-150&#215;150-1.jpg" (post #62)
+
+
+------
+[WARNING] Could not find the author for "adorable-adult-baby-1648363-1-150&#215;150-1.jpg" (post #63)
+
+
+------
+[WARNING] Could not find the author for "cropped-portrait-2865605_640-150&#215;150-1.jpg" (post #64)
+
+
+------
+[WARNING] Could not find the author for "cropped-smile-1034157_640-150&#215;150-1.jpg" (post #65)
+
+
+------
+[WARNING] Could not find the author for "kubio-featured-image.jpg" (post #88)
+
+
+------
+[WARNING] Could not find the author for "kubio-default-attachment.jpg" (post #90)
+
+
+------
+[WARNING] Could not find the author for "kubio-featured-image.jpg" (post #91)
+
+
+------
+[WARNING] Could not find the author for "Lorem ipsum" (post #486)
+
+
+------
+[WARNING] Could not find the author for "Lorem Ipsum" (post #487)
+
+
+------
+[WARNING] Could not find the author for "Lorem Ipsum" (post #488)
+
+
+------
+[WARNING] Could not find the author for "404" (post #12)
+
+
+------
+[WARNING] Could not find the author for "Archive Product" (post #13)
+
+
+------
+[WARNING] Could not find the author for "Front Page" (post #14)
+
+
+------
+[WARNING] Could not find the author for "Full Width" (post #15)
+
+
+------
+[WARNING] Could not find the author for "Index" (post #16)
+
+
+------
+[WARNING] Could not find the author for "Page" (post #17)
+
+
+------
+[WARNING] Could not find the author for "Search" (post #18)
+
+
+------
+[WARNING] Could not find the author for "Single Product" (post #19)
+
+
+------
+[WARNING] Could not find the author for "Single Post" (post #20)
+
+
+------
+[WARNING] Could not find the author for "Footer" (post #21)
+
+
+------
+[WARNING] Could not find the author for "Front Header" (post #23)
+
+
+------
+[WARNING] Could not find the author for "Header" (post #495)
+
+
+------
+[WARNING] Could not find the author for "Sidebar" (post #496)
+
+
+------
+[WARNING] Could not find the author for "Contact form 1" (post #72)
+
+
+------
+[WARNING] Could not find the author for "Page With Left Sidebar" (post #468)
+
+
+------
+[WARNING] Could not find the author for "Page With Right Sidebar" (post #469)
+
+
+------
+[WARNING] Could not find the author for "Page Sidebar" (post #470)
+
+
+------
+[WARNING] Could not find the author for "Custom Styles" (post #473)
+
+
+------
+[INFO] Starting remapping of featured images
+
+
+------
+[INFO] Remapping featured image ID 480 to new ID 91 for post ID 486
+
+
+------
+[INFO] Remapping featured image ID 480 to new ID 91 for post ID 487
+
+
+------
+[INFO] Remapping featured image ID 480 to new ID 91 for post ID 488
+

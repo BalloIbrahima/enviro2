@@ -1,0 +1,86 @@
+{
+  "name": "kubio/section",
+  "title": "Section",
+  "category": "kubio-layout",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	},
+	"attrs": {
+	  "type": "object"
+	}
+  },
+  "supports": {
+	"anchor": true,
+	"kubio": {
+	  "appearanceEffect": true,
+	  "elementsEnum": {
+		"OUTER": "outer",
+		"INNER": "inner",
+		"TYPOGRAPHY_HOLDERS": "typographyHolders"
+	  },
+	  "elementsByName": {
+		"outer": {
+		  "default": true,
+		  "wrapper": true,
+		  "props": {
+			"className": [
+			  "d-flex",
+			  "h-section-global-spacing"
+			]
+		  },
+		  "supports": {
+			"background": true,
+			"separator": true
+		  }
+		},
+		"inner": {
+		  "props": {
+			"className": [
+			  "h-section-grid-container"
+			]
+		  }
+		},
+		"typographyHolders": {
+		    "selector": " > *"
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "outer"
+		},
+		"children": [
+		  {
+			"type": "background"
+		  },
+		  {
+			"type": "separators"
+		  },
+		  {
+			"type": "element",
+			"props": {
+			  "name": "inner"
+			},
+			"children": [
+			  {
+				"type": "wp:InnerBlocks"
+			  }
+			]
+		  }
+		]
+	  },
+	  "default": {
+		"style": {
+		  "customHeight": {
+			"type": "fit-to-content"
+		  }
+		},
+		"props": {
+		  "width": "boxed",
+		  "verticalAlign": "center"
+		}
+	  }
+	}
+  }
+}

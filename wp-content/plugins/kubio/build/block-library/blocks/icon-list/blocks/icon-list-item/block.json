@@ -1,0 +1,148 @@
+{
+	"name": "kubio/iconlistitem",
+	"category": "kubio-basic",
+	"usesContext": [
+		"text",
+		"icon"
+	],
+	"parent": [
+		"kubio/iconlist"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"default": "Icon List item"
+		},
+		"icon": {
+			"type": "string",
+			"default": "font-awesome/plus"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"typeOpenLink": "sameWindow"
+			}
+		},
+		"useForAll": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {},
+				"props": {}
+			},
+			"elementsEnum": {
+				"ITEM": "item",
+				"LINK": "link",
+				"ICON": "icon",
+				"TEXT": "text",
+				"DIVIDER": "divider",
+				"DIVIDERWRAPPER": "divider-wrapper",
+				"TEXTWRAPPER": "text-wrapper"
+			},
+			"elementsByName": {
+				"item": {
+					"wrapper": false,
+					"default": true,
+					"props": {
+						"tag": "li"
+					}
+				},
+				"link": {
+					"props": {
+						"tag": "a"
+					}
+				},
+				"icon": {
+					"props": {
+						"tag": "icon"
+					}
+				},
+				"text": {
+					"props": {
+						"tag": "span"
+					}
+				},
+				"text-wrapper": {},
+				"divider-wrapper": {},
+				"divider": {}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "item"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "divider-wrapper",
+							"className": [
+								"first-el-spacer"
+							],
+							"shouldRender": "computed.isFirstChild"
+						}
+					},
+					{
+						"type": "LinkWrapper",
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "text-wrapper"
+								},
+								"children": [
+									{
+										"type": "element",
+										"props": {
+											"name": "icon"
+										}
+									},
+									{
+										"type": "element",
+										"props": {
+											"name": "text"
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "divider-wrapper",
+							"className": [
+								"last-el-spacer"
+							],
+							"shouldRender": "computed.isLastChild"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "divider-wrapper"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "divider",
+									"shouldRender": "computed.dividerEnabled"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

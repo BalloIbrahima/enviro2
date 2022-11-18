@@ -1,0 +1,74 @@
+{
+	"name": "kubio/tabitem",
+	"category": "kubio-basic",
+	"parent": [
+		"kubio/tabitems"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"slug": {
+			"type": "string",
+			"default": "tab-title"
+		},
+		"icon": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"inseter": false,
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"INNER": "inner",
+				"CONTENT": "content"
+			},
+			"elementsByName": {
+				"inner": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"className": [
+							"h-tabs-item-content",
+							"h-tabs-item",
+							"h-y-container"
+						]
+					}
+				},
+				"content": {
+					"props": {
+						"className": [
+							"h-y-container",
+							"tab-item-content-wrapper"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "inner"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "content"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+{
+	"name": "kubio/post-featured-image",
+	"category": "kubio-blog-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"showPlaceholder": {
+			"type": "boolean",
+			"default": false
+		},
+		"imageSize": {
+			"type": "string",
+			"default": "cover"
+		},
+		"addLink": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"container": {
+							"background": {
+								"color": "#F79007"
+							},
+							"textAlign": "center",
+							"height": {
+								"value": 300,
+								"unit": "px"
+							}
+						},
+						"image": {
+							"object": {
+								"position": "center center",
+								"fit": "cover"
+							}
+						}
+					}
+				},
+				"props": {
+					"aspectRatio": "16-9",
+					"verticalAlign": "center"
+				}
+			},
+			"elementsEnum": {
+				"INNER": "inner",
+				"CONTAINER": "container",
+				"IMAGE": "image",
+				"ALIGN": "align"
+			},
+			"elementsByName": {
+				"container": {
+					"default": true,
+					"wrapper": true,
+					"props": {
+						"tag": "figure"
+					}
+				},
+				"inner": {},
+				"image": {
+					"props": {
+						"tag": "img"
+					}
+				},
+				"align": {
+					"props": {
+						"className": [
+							"h-y-container"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"shouldRender": "computed.showImage",
+							"name": "image"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "inner"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "align"
+								},
+								"children": [
+									{
+										"type": "wp:InnerBlocks"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

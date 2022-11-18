@@ -1,0 +1,156 @@
+{
+  "name": "kubio/column",
+  "title": "Column",
+  "category": "kubio-basic",
+  "usesContext": [
+    "kubio/parentKubio"
+  ],
+  "parent": [
+    "kubio/row"
+  ],
+  "attributes": {
+    "kubio": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "kubio": {
+      "appearanceEffect": true,
+      "default": {
+        "props": {
+          "internal": {
+            "type": "object",
+            "default": {
+              "heroSection": {
+                "type": "none"
+              }
+            }
+          },
+          "overlapOptions": false,
+          "layout": {
+            "horizontalGap": 2,
+            "verticalGap": 2,
+            "horizontalInnerGap": "inherit",
+            "verticalInnerGap": "inherit",
+            "verticalAlign": "start"
+          }
+        },
+        "style": {
+          "descendants": {
+            "container": {
+              "customHeight": {
+                "type": "fit-to-content",
+                "min-height": {
+                  "value": "",
+                  "unit": "px"
+                }
+              }
+            },
+            "inner": {
+              "textAlign": "center"
+            }
+          }
+        },
+        "_style": {
+          "descendants": {
+            "container": {
+              "columnWidth": {
+                "type": "custom"
+              },
+              "media": {
+                "mobile": {
+                  "columnWidth": {
+                    "type": "custom",
+                    "custom": {
+                      "value": 100,
+                      "unit": "%"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "elementsEnum": {
+        "INNER": "inner",
+        "CONTAINER": "container",
+        "VSPACE": "v-space",
+        "ALIGN": "align",
+		"TYPOGRAPHY_HOLDERS": "typographyHolders"
+      },
+      "elementsByName": {
+        "inner": {
+          "default": true,
+          "props": {
+            "className": [
+              "d-flex",
+              "h-flex-basis"
+            ]
+          },
+          "supports": {
+            "background": true,
+            "separator": true
+          }
+        },
+        "container": {
+          "wrapper": true,
+          "props": {
+            "className": [
+              "d-flex"
+            ]
+          }
+        },
+        "align": {
+          "props": {
+            "className": [
+              "h-y-container",
+              "h-column__content",
+              "h-column__v-align"
+            ]
+          }
+        },
+        "v-space": {
+          "selector": "> * > .h-y-container > *:not(:last-child)"
+        },
+		"typographyHolders": {
+		    "selector": " > *"
+		}
+      },
+      "template": {
+        "type": "element",
+        "props": {
+          "name": "container"
+        },
+        "children": [
+          {
+            "type": "element",
+            "props": {
+              "name": "inner"
+            },
+            "children": [
+              {
+                "type": "background"
+              },
+              {
+                "type": "separators"
+              },
+              {
+                "type": "element",
+                "props": {
+                  "name": "align"
+                },
+                "children": [
+                  {
+                    "type": "wp:InnerBlocks"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

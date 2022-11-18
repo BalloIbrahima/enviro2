@@ -1,0 +1,82 @@
+{
+	"name": "kubio/map",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"address": {
+			"type": "string",
+			"default": "New York"
+		},
+		"apiKey": {
+			"type": "string",
+			"default": ""
+		},
+		"zoom": {
+			"type": "object",
+			"default": {
+				"value": 5
+			}
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"outer": {
+							"height": {
+								"value": 350,
+								"unit": "px"
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"WRAPPER": "wrapper",
+				"IFRAME": "iframe"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true
+				},
+				"wrapper": {},
+				"iframe": {
+					"props": {
+						"className": [
+							"map-iframe"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "wrapper"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "iframe",
+									"tag": "iframe"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

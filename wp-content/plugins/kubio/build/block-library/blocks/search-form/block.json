@@ -1,0 +1,190 @@
+{
+	"name": "kubio/search-form",
+	"category": "kubio-site-data",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"placeholderText": {
+			"type": "string",
+			"default": "Search..."
+		},
+		"iconName": {
+			"type": "string",
+			"default": "font-awesome/search"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"props": {
+					"layout": "inputAndButton",
+					"buttonType": "icon",
+					"buttonText": "Search"
+				},
+				"style": {
+					"descendants": {
+						"input": {
+							"border": {
+								"top": {
+									"width": {
+										"value": 1,
+										"unit": "px"
+									},
+									"style": "solid"
+								},
+								"right": {
+									"width": {
+										"value": 1,
+										"unit": "px"
+									},
+									"style": "solid"
+								},
+								"bottom": {
+									"width": {
+										"value": 1,
+										"unit": "px"
+									},
+									"style": "solid"
+								},
+								"left": {
+									"width": {
+										"value": 1,
+										"unit": "px"
+									},
+									"style": "solid"
+								}
+							}
+						},
+						"button": {
+							"width": {
+								"unit": "px",
+								"value": 60
+							},
+							"background": {}
+						},
+						"icon": {
+							"size": {
+								"value": 16
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"PLACEHOLDER": "placeholder",
+				"FORM": "form",
+				"INPUT": "input",
+				"BUTTON": "button",
+				"ICON": "icon",
+				"BUTTONTEXT": "buttonText"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true,
+					"className": [
+						"search-form-container"
+					]
+				},
+				"placeholder": {
+					"selector": {
+						"normal": ".search-input::placeholder",
+						"hover": ".search-input:hover::placeholder"
+					}
+				},
+				"form": {
+					"props": {
+						"tag": "form"
+					},
+					"className": [
+						"search-form"
+					]
+				},
+				"input": {
+					"props": {
+						"tag": "input"
+					},
+					"className": [
+						"search-input"
+					]
+				},
+				"button": {
+					"props": {
+						"tag": "button"
+					},
+					"className": [
+						"search-button"
+					]
+				},
+				"icon": {
+					"props": {
+						"tag": "icon"
+					},
+					"className": [
+						"button-icon"
+					]
+				},
+				"buttonText": {
+					"props": {
+						"tag": "span"
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "form"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "lightbox"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "input",
+									"shouldRender": "computed.showInput"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "button",
+									"shouldRender": "computed.showButton"
+								},
+								"children": [
+									{
+										"type": "element",
+										"props": {
+											"name": "icon",
+											"shouldRender": "computed.showButtonIcon"
+										}
+									},
+									{
+										"type": "element",
+										"props": {
+											"name": "buttonText",
+											"shouldRender": "computed.showButtonText"
+										}
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

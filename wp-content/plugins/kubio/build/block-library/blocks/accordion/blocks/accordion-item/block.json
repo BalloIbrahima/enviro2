@@ -1,0 +1,147 @@
+{
+	"name": "kubio/accordionitem",
+	"category": "kubio-basic",
+	"usesContext": [
+		"normalIcon",
+		"activeIcon",
+		"iconPosition"
+	],
+	"parent": [
+		"kubio/accordion"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"slug": {
+			"type": "string",
+			"default": "accordion-title"
+		},
+		"title": {
+			"type": "string",
+			"default": "Accordion item"
+		},
+		"openByDefault": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {},
+				"props": {}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"TITLE": "title",
+				"ICON_NORMAL": "iconNormal",
+				"ICON_ACTIVE": "iconActive",
+				"TITLE_TEXT": "titleText",
+				"CONTENT": "content"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"className": [
+							"h-accordion-item"
+						]
+					}
+				},
+				"title": {
+					"prefixWithTag": true,
+					"props": {
+						"tag": "a",
+						"className": [
+							"h-accordion-item-title",
+							"d-flex",
+							"align-items-center",
+							"h-global-transition"
+						]
+					}
+				},
+				"iconNormal": {
+					"props": {
+						"tag": "icon",
+						"className": [
+							"h-accordion-item-title-normal-icon",
+							"h-accordion-item-title-icon"
+						]
+					}
+				},
+				"iconActive": {
+					"props": {
+						"tag": "icon",
+						"className": [
+							"h-accordion-item-title-active-icon",
+							"h-accordion-item-title-icon"
+						]
+					}
+				},
+				"titleText": {
+					"props": {
+						"className": [
+							"h-accordion-item-title__text"
+						]
+					}
+				},
+				"content": {
+					"props": {
+						"className": [
+							"h-accordion-item-content__container",
+							"h-y-container"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "title"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "iconNormal"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "iconActive"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "titleText"
+								}
+							}
+						]
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "content"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

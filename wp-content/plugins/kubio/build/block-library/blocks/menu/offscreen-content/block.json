@@ -1,0 +1,33 @@
+{
+  "name": "kubio/menu-offscreen-content",
+  "category": "kubio-basic",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	}
+  },
+  "supports": {
+	"kubio": {
+	  "elementsEnum": {
+		"CONTAINER": "container"
+	  },
+	  "elementsByName": {
+		"container": {
+		  "default": true,
+		  "wrapper": true
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "container"
+		},
+		"children": [
+		  {
+			"type": "wp:InnerBlocks"
+		  }
+		]
+	  }
+	}
+  }
+}

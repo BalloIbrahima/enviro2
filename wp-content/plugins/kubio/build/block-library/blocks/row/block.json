@@ -1,0 +1,111 @@
+{
+  "name": "kubio/row",
+  "title": "Columns",
+  "category": "kubio-basic",
+  "attributes": {
+    "kubio": {
+      "type": "object"
+    },
+    "templateLock": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "kubio": {
+      "appearanceEffect": true,
+      "props": {
+        "fullBackground": {
+          "type": "boolean"
+        },
+        "layout": {
+          "type": "object"
+        }
+      },
+      "elementsEnum": {
+        "CONTAINER": "container",
+        "INNER": "inner",
+        "CENTER": "center",
+        "OUTER_GAPS": "outerGaps",
+        "INNER_GAPS": "innerGaps",
+		"TYPOGRAPHY_HOLDERS": "typographyHolders"
+      },
+      "elementsByName": {
+        "container": {
+          "wrapper": true,
+          "default": true,
+          "supports": {
+            "separator": true,
+            "background": true
+          }
+        },
+        "center": {},
+        "inner": {
+          "props": {
+            "className": [
+              "h-row"
+            ]
+          }
+        },
+        "outerGaps": {
+          "selector": "> * > .h-row > [class*='h-col-'] > [class*='h-px-']"
+        },
+        "innerGaps": {
+          "selector": " > * > .h-row > [class*='h-col-']"
+        },
+		"typographyHolders": {
+		    "selector": " > *"
+		}
+      },
+      "template": {
+        "type": "element",
+        "props": {
+          "name": "container"
+        },
+        "children": [
+          {
+            "type": "background"
+          },
+          {
+            "type": "separators"
+          },
+          {
+            "type": "element",
+            "props": {
+              "name": "inner"
+            },
+            "children": [
+              {
+                "type": "wp:InnerBlocks"
+              }
+            ]
+          }
+        ]
+      },
+      "default": {
+        "props": {
+          "fullBackground": false,
+          "layout": {
+            "equalWidth": false,
+            "equalHeight": true,
+            "itemsPerRow": 2,
+            "verticalAlign": "center",
+            "horizontalAlign": "center",
+            "horizontalGap": 2,
+            "verticalGap": 2,
+            "horizontalInnerGap": 2,
+            "verticalInnerGap": 2
+          },
+          "media": {
+            "mobile": {
+              "layout": {
+                "itemsPerRow": 1,
+                "horizontalGap": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

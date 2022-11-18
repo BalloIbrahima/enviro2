@@ -1,0 +1,78 @@
+{
+	"name": "kubio/social-icons",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"groupStyles": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"OUTER": "outer",
+				"ICON": "icon"
+			},
+			"elementsByName": {
+				"outer": {
+					"props": {
+						"className": [
+							"social-icons--container"
+						]
+					},
+					"wrapper": true,
+					"default": true
+				},
+				"icon": {
+					"selector": ".h-svg-icon"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			},
+			"default": {
+				"props": {
+					"styleType": "shared"
+				},
+				"style": {
+					"descendants": {
+						"outer": {
+							"textAlign": "center"
+						},
+						"icon": {
+							"fill": "rgba(0, 0, 0, 0.5)",
+							"size": {
+								"value": 32,
+								"unit": "px"
+							},
+							"margin": {
+								"right": {
+									"value": 15,
+									"unit": "px"
+								}
+							},
+							"padding": {
+								"right": {
+									"value": 0,
+									"unit": "px"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

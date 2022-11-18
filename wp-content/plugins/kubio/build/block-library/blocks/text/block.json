@@ -1,0 +1,54 @@
+{
+	"name": "kubio/text",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"default": ""
+		},
+		"dropCap": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {},
+				"props": {
+					"isLead": false
+				}
+			},
+			"elementsEnum": {
+				"TEXT": "text",
+				"FIRSTLETTER": "first-letter"
+			},
+			"elementsByName": {
+				"text": {
+					"default": true,
+					"wrapper": true,
+					"selector": "p.wp-block.wp-block-kubio-text__text",
+					"selectorPrepend": true,
+					"props": {
+						"tag": "p"
+					}
+				},
+				"first-letter": {
+					"selector": "&::first-letter"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "text"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "core/search",
+  "kubioSupport": {
+	"elementsEnum": {
+	  "WIDGET_BOX": "widget-box",
+	  "WIDGET_ALIGN_HOLDER": "widget-align",
+	  "WIDGET_INPUT": "widget-input",
+	  "WIDGET_BUTTON": "widget-button"
+	},
+	"elementsByName": {
+	  "widget-box": {
+		"default": true,
+		"wrapper": true
+	  },
+	  "widget-align": {
+		"selector": "&.wp-block-search",
+		"usePrefix": true
+	  },
+	  "widget-input": {
+		"selector": "&.wp-block-search.wp-block-search__button-outside .wp-block-search__input, &.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper",
+		"usePrefix": true
+	  },
+	  "widget-button": {
+		"selector": "&.wp-block-search .wp-block-search__button",
+		"usePrefix": true
+	  }
+	}
+  }
+}

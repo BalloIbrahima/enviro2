@@ -1,0 +1,77 @@
+{
+	"name": "kubio/dropdown-menu",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"templateLock": {
+			"type": "string"
+		},
+		"hideSubmenu": {
+			"type": "boolean",
+			"default": false
+		},
+		"showOffscreenMenuOn": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"providesContext": {
+		"kubio/hideSubmenu": "hideSubmenu"
+	},
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {
+					"descendants": {
+						"sub-menu-a": {
+							"border": {
+								"bottom": {
+									"style": "none"
+								}
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"SUB_MENU_A": "sub-menu-a",
+				"OUTER": "outer",
+				"HOVER_EFFECT_BORDER": "hover-effect-border",
+				"HOVER_EFFECT_BACKGROUND": "hover-effect-background"
+			},
+			"elementsByName": {
+				"outer": {
+					"default": true,
+					"wrapper": true,
+					"props": {
+						"className": ["kubio-dropdown-menu", "h-ignore-global-body-typography"]
+					}
+				},
+				"hover-effect-border": {
+					"selector": "&.bordered-active-item > .kubio-menu > ul > li::before, &.bordered-active-item > .kubio-menu > ul > li::after"
+				},
+				"hover-effect-background": {
+					"selector": "&.solid-active-item > .kubio-menu > ul > li::before, &.solid-active-item > .kubio-menu > ul > li::after"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			},
+			"supports": {
+				"advanced": {
+					"responsive": true
+				}
+			}
+		}
+	}
+}

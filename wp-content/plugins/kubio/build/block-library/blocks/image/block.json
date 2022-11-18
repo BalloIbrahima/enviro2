@@ -1,0 +1,169 @@
+{
+	"name": "kubio/image",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"typeOpenLink": "sameWindow",
+			  	"lightboxMedia": ""
+			}
+		},
+		"align": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"alt": {
+			"type": "string",
+			"default": ""
+		},
+		"caption": {
+			"type": "string",
+			"source": "html",
+			"default": ""
+		},
+		"captionEnabled": {
+			"type": "boolean",
+			"default": false
+		},
+		"title": {
+			"type": "string"
+		},
+		"id": {
+			"type": "number"
+		},
+		"sizeSlug": {
+			"type": "string",
+			"default": "large"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"assetsURLImporterMap": {
+				"url": {
+					"assetIdToAttr": "id",
+					"subpath": false
+				}
+			},
+			"default": {
+				"props": {
+					"useCustomDimensions": false,
+					"frame": {
+						"enabled": false,
+						"type": "background",
+						"showFrameOverImage": false
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"IMAGE": "image",
+				"OVERLAY": "overlay",
+				"CAPTION": "caption",
+			    "CAPTION_CONTAINER": "captionContainer",
+			    "FRAME_IMAGE": "frameImage",
+				"FRAME_CONTAINER": "frameContainer"
+			},
+			"elementsByName": {
+				"outer": {
+					"default": true,
+					"wrapper": true,
+					"props": {
+						"tag": "figure"
+					}
+				},
+				"image": {
+					"props": {
+						"tag": "img",
+						"className": [
+							"d-flex"
+						]
+					}
+				},
+				"caption": {
+					"props": {
+						"tag": "figcaption"
+					}
+				},
+				"frameImage": {
+					"props": {
+						"className": []
+					}
+				},
+				"frameContainer": {},
+				"overlay": {
+					"supports": {
+						"background": true
+					}
+				},
+			  	"captionContainer": {}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+			    "children": [{
+				  "type": "element",
+				  "props": {
+					"name": "captionContainer"
+				  },
+				  "children": [
+					{
+					  "type": "LinkWrapper",
+					  "children": [
+						{
+						  "type": "element",
+						  "props": {
+							"name": "frameContainer"
+						  },
+						  "children": [
+							{
+							  "type": "element",
+							  "props": {
+								"name": "overlay",
+								"shouldRender": "computed.showOverlay"
+							  },
+							  "children": [
+								{
+								  "type": "background"
+								}
+							  ]
+							},
+							{
+							  "type": "element",
+							  "props": {
+								"name": "image"
+							  }
+							},
+							{
+							  "type": "element",
+							  "props": {
+								"name": "frameImage",
+								"shouldRender": "computed.showFrameImage"
+							  }
+							}
+						  ]
+						}
+					  ]
+					},
+					{
+					  "type": "element",
+					  "props": {
+						"name": "caption",
+						"shouldRender": "computed.showCaption"
+					  }
+					}
+				  ]
+				}]
+			}
+		}
+	}
+}

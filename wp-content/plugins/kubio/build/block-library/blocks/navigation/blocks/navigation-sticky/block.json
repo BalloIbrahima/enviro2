@@ -1,0 +1,38 @@
+{
+  "name": "kubio/navigation-sticky-items",
+  "category": "kubio-basic",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	}
+  },
+  "supports": {
+	"inseter": false,
+	"kubio": {
+	  "elementsEnum": {
+		"OUTER": "outer"
+	  },
+	  "elementsByName": {
+		"outer": {
+		  "useBlockProps" : false,
+		  "wrapper": true,
+		  "default": true,
+		  "props" : {
+			"data-nav-sticky" : "true"
+		  }
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "outer"
+		},
+		"children": [
+		  {
+			"type": "wp:InnerBlocks"
+		  }
+		]
+	  }
+	}
+  }
+}

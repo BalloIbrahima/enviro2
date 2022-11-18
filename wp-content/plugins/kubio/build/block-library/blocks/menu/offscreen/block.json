@@ -1,0 +1,229 @@
+{
+	"name": "kubio/menu-offscreen",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"openSide": {
+			"type": "string",
+			"default": "right"
+		},
+		"icon": {
+			"type": "string",
+			"default": "font-awesome/navicon"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {
+					"descendants": {
+						"offscreen": {
+							"background": {
+								"color": "#222B34"
+							},
+							"width": {
+								"value": 300,
+								"unit": "px",
+								"important": true
+							}
+						},
+						"offscreenOverlay": {
+							"background": {
+								"color": "rgba(0,0,0,0.5)"
+							}
+						},
+						"icon": {
+							"background": {
+								"color": "rgba(0, 0, 0, 0.1)"
+							},
+							"border": {
+								"top": {
+									"radius": {
+										"left": {
+											"unit": "%",
+											"value": "100"
+										},
+										"right": {
+											"unit": "%",
+											"value": "100"
+										}
+									},
+									"width": {
+										"value": "0",
+										"unit": "px"
+									},
+									"style": "solid",
+									"color": "black"
+								},
+								"left": {
+									"width": {
+										"value": "0",
+										"unit": "px"
+									},
+									"style": "solid",
+									"color": "black"
+								},
+								"right": {
+									"width": {
+										"value": "0",
+										"unit": "px"
+									},
+									"style": "solid",
+									"color": "black"
+								},
+								"bottom": {
+									"radius": {
+										"left": {
+											"unit": "%",
+											"value": "100"
+										},
+										"right": {
+											"unit": "%",
+											"value": "100"
+										}
+									},
+									"width": {
+										"value": "0",
+										"unit": "px"
+									},
+									"style": "solid",
+									"color": "black"
+								}
+							},
+							"fill": "white",
+							"padding": {
+								"top": {
+									"unit": "px",
+									"value": "5"
+								},
+								"bottom": {
+									"unit": "px",
+									"value": "5"
+								},
+								"left": {
+									"unit": "px",
+									"value": "5"
+								},
+								"right": {
+									"unit": "px",
+									"value": "5"
+								}
+							},
+							"width": {
+								"unit": "px",
+								"value": "24"
+							},
+							"height": {
+								"unit": "px",
+								"value": "24"
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"CONTAINER": "container",
+				"OFFSCREEN": "offscreen",
+				"OFFSCREEN_OVERLAY": "offscreenOverlay",
+				"ICON_WRAPPER": "iconWrapper",
+				"ICON": "icon",
+				"ALIGN": "align"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true
+				},
+				"iconWrapper": {
+					"props": {
+						"tag": "button",
+						"className": [
+							"kubio-offscreen-icon-wrapper"
+						]
+					}
+				},
+				"icon": {
+					"default": true,
+					"props": {
+						"tag": "icon"
+					}
+				},
+				"offscreen": {
+					"useWrapperPrefix": false,
+					"usePrefix": false,
+					"props": {
+						"className": [
+							"kubio-offscreen",
+							"offscreen"
+						]
+					}
+				},
+				"offscreenOverlay": {
+					"useWrapperPrefix": false,
+					"usePrefix": false,
+					"props": {
+						"className": [
+							"kubio-offscreen-overlay"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "align"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "iconWrapper"
+								},
+								"children": [
+									{
+										"type": "element",
+										"props": {
+											"name": "icon"
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "offscreenOverlay"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "offscreen"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "inner"
+								},
+								"children": [
+									{
+										"type": "wp:InnerBlocks"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

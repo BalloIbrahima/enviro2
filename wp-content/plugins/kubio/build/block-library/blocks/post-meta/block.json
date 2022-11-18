@@ -1,0 +1,149 @@
+{
+	"name": "kubio/post-meta",
+	"category": "kubio-blog-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"separator": {
+			"type": "string",
+			"default": "|"
+		},
+		"showIcons": {
+			"type": "boolean",
+			"default": true
+		},
+		"dateFormat": {
+			"type": "string",
+			"default": "F j, Y"
+		},
+		"editorContext": {
+			"type": "object"
+		},
+		"metadata": {
+			"type": "array",
+			"default": [
+				{
+					"value": "author",
+					"name": "Author",
+					"check": true,
+					"icon": "font-awesome/user",
+					"id": 0,
+					"prefix": "",
+					"suffix": ""
+				},
+				{
+					"value": "date",
+					"name": "Date",
+					"check": true,
+					"icon": "font-awesome/calendar",
+					"id": 1,
+					"prefix": "",
+					"suffix": ""
+				},
+				{
+					"value": "time",
+					"name": "Time",
+					"check": true,
+					"icon": "font-awesome/clock-o",
+					"id": 2,
+					"prefix": "",
+					"suffix": ""
+				},
+				{
+					"value": "comments",
+					"name": "Comments",
+					"check": true,
+					"icon": "font-awesome/comment",
+					"id": 3,
+					"prefix": "",
+					"suffix": ""
+				}
+			]
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"icons": {
+							"width": {
+								"value": 20,
+								"unit": "px"
+							},
+							"height": {
+								"value": 20,
+								"unit": "px"
+							},
+							"margin": {
+								"right": {
+									"value": 5,
+									"unit": "px"
+								}
+							}
+						},
+						"separators": {
+							"padding": {
+								"left": {
+									"value": 5,
+									"unit": "px"
+								},
+								"right": {
+									"value": 5,
+									"unit": "px"
+								}
+							}
+						}
+					}
+				},
+				"props": {}
+			},
+			"elementsEnum": {
+				"METADATACONTAINER": "metaDataContainer",
+				"METADATALINKS": "metaDataLinks",
+				"METADATAPREFIX": "metaDataPrefix",
+				"METADATASUFFIX": "metaDataSuffix",
+				"ICONS": "icons",
+				"SEPARATORS": "separators"
+			},
+			"elementsByName": {
+				"metaDataContainer": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"className": [
+							"h-blog-meta"
+						]
+					}
+				},
+				"metaDataLinks": {
+					"selector": "a"
+				},
+				"metaDataPrefix": {
+					"selector": ".metadata-prefix"
+				},
+				"metaDataSuffix": {
+					"selector": ".metadata-suffix"
+				},
+				"icons": {
+					"selector": ".h-svg-icon"
+				},
+				"separators": {
+					"selector": ".metadata-separator"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "metaDataContainer"
+				}
+			}
+		}
+	}
+}

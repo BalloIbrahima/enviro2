@@ -1,0 +1,53 @@
+{
+	"name": "kubio/pagination-numbers",
+	"category": "kubio-blog-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"usesContext": ["queryId", "query", "queryContext", "useMainQuery"],
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {},
+				"props": {}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"PAGE_NUMBERS": "numbers",
+				"CURRENT_PAGE": "current",
+				"DOTS": "dots",
+				"GENERAL": "general",
+			    "TYPOGRAPHY_HOLDERS": "typographyHolders"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true
+				},
+				"general": {
+					"selector": "& .page-numbers"
+				},
+				"numbers": {
+					"selector": "& .page-numbers:not(.current):not(.dots)"
+				},
+				"current": {
+					"selector": "& .page-numbers.current"
+				},
+				"dots": {
+					"selector": "& .page-numbers.dots"
+				},
+				"typographyHolders": {
+				  "selector": " > *"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				}
+			}
+		}
+	}
+}

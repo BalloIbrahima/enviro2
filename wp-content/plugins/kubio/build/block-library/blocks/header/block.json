@@ -1,0 +1,47 @@
+{
+	"name": "kubio/header",
+	"category": "kubio-template-parts",
+	"attributes": {
+		"postId": {
+			"type": "number"
+		},
+		"slug": {
+			"type": "string"
+		},
+		"theme": {
+			"type": "string"
+		},
+		"kubio": {
+			"type": "object"
+		},
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"elementsEnum": {
+				"CONTAINER": "container"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		},
+		"__experimentalDisableBlockOverlay": true
+	}
+}

@@ -1,0 +1,135 @@
+{
+  "name": "kubio/post-comments-form",
+  "category": "kubio-blog-components",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	},
+	"prefix": {
+	  "type": "string",
+	  "default": ""
+	}
+  },
+  "usesContext": [
+	"postId",
+	"postType"
+  ],
+  "supports": {
+	"kubio": {
+	  "default": {
+		"style": {
+		  "descendants": {
+			"commentFormInputs": {
+			  "border": {
+				"top": {
+				  "width": {
+					"value": 1,
+					"unit": "px"
+				  },
+				  "style": "solid"
+				},
+				"right": {
+				  "width": {
+					"value": 1,
+					"unit": "px"
+				  },
+				  "style": "solid"
+				},
+				"left": {
+				  "width": {
+					"value": 1,
+					"unit": "px"
+				  },
+				  "style": "solid"
+				},
+				"bottom": {
+				  "width": {
+					"value": 1,
+					"unit": "px"
+				  },
+				  "style": "solid"
+				}
+			  }
+			},
+			"commentFormButtonWrapper": {
+			  "textAlign": "left"
+			}
+		  }
+		},
+		"props": {}
+	  },
+	  "elementsEnum": {
+		"CONTAINER": "container",
+		"LINK": "link",
+		"PREFIX": "prefix",
+		"TAGS": "tags",
+		"COMMENT_FORM_CONTAINER": "container",
+		"COMMENT_FORM_TITLE": "commentFormTitle",
+		"COMMENT_FORM_LABELS": "commentFormLabels",
+		"COMMENT_FORM_INPUTS": "commentFormInputs",
+		"COMMENT_FORM_BUTTON": "commentFormButton",
+		"COMMENT_FORM_BUTTON_WRAPPER": "commentFormButtonWrapper",
+		"COMMENT_FORM_LINKS": "commentFormLinks",
+		"COMMENT_FORM_NOTES": "commentFormNotes"
+	  },
+	  "elementsByName": {
+		"container": {
+		  "wrapper": true,
+		  "default": true
+		},
+		"commentFormTitle": {
+		  "selector": ".comment-reply-title"
+		},
+		"commentFormLabels": {
+		  "selector": "label"
+		},
+		"commentFormInputs": {
+		  "selector": "input:not([type=\"submit\"]),textarea"
+		},
+		"commentFormButtonWrapper": {
+		  "selector": ".form-submit"
+		},
+		"commentFormButton": {
+		  "selector": ".comment-form [type=\"submit\"]"
+		},
+		"commentFormLinks": {
+		  "selector": ".comment-form a, .comment-respond a"
+		},
+		"commentFormNotes": {
+		  "selector": ".comment-notes"
+		},
+		"link": {
+		  "selector": "a",
+		  "className": [
+			"kubio-post-categories-link"
+		  ]
+		},
+		"prefix": {
+		  "className": [
+			"kubio-post-categories-prefix"
+		  ]
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "container"
+		},
+		"children": [
+		  {
+			"type": "element",
+			"props": {
+			  "name": "prefix"
+			}
+		  },
+		  {
+			"type": "element",
+			"props": {
+			  "name": "tags"
+			}
+		  }
+		]
+	  }
+	}
+  }
+}

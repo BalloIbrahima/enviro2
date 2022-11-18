@@ -1,0 +1,63 @@
+{
+	"name": "kubio/linkgroup",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"OUTER": "outer",
+				"SPACING": "spacing",
+				"H_SPACE": "hspace",
+				"H_SPACE_GROUP": "hSpaceGroup"
+			},
+			"elementsByName": {
+				"outer": {
+					"props": {
+						"className": [
+							"h-x-container"
+						]
+					},
+					"wrapper": true,
+					"default": true
+				},
+				"spacing": {
+					"props": {
+						"className": [
+							"h-x-container-inner"
+						]
+					}
+				},
+				"hspace": {
+					"selector": " > .h-x-container-inner > *"
+				},
+				"hSpaceGroup": {
+					"selector": " > .h-x-container-inner"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "spacing"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

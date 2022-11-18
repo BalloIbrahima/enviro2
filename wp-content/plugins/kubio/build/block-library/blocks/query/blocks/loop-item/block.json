@@ -1,0 +1,16 @@
+{
+	"name": "kubio/query-loop-item",
+	"attributes": {
+		"slug": {
+			"type": "string",
+			"default": "default"
+		},
+		"label": {
+			"type": "string",
+			"default": "Default"
+		}
+	},
+	"parent": ["kubio/query-loop"],
+	"category": "kubio-layout",
+	"usesContext": ["queryId", "query", "queryContext", "kubio/parentKubio"]
+}

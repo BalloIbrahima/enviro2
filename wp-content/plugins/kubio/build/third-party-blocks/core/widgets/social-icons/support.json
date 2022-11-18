@@ -1,0 +1,34 @@
+{
+  "name": "core/social-links",
+  "kubioSupport": {
+	"elementsEnum": {
+	  "WIDGET_BOX": "widget-box",
+	  "WIDGET_ALIGN_HOLDER": "widget-align",
+	  "WIDGET_ICON": "widget-icon",
+	  "WIDGET_ICON_SVG": "widget-icon-svg",
+	  "WIDGET_LINK": "widget-link"
+	},
+	"elementsByName": {
+	  "widget-box": {
+		"default": true,
+		"wrapper": true
+	  },
+	  "widget-align": {
+		"selector": "&.wp-block-social-links",
+		"usePrefix": true
+	  },
+	  "widget-icon": {
+		"selector": "&.wp-block-social-links .wp-block-social-link",
+		"usePrefix": true
+	  },
+	  "widget-link": {
+		"selector": "&.wp-block-social-links .wp-block-social-link a",
+		"usePrefix": true
+	  },
+	  "widget-icon-svg": {
+		"selector": "&.wp-block-social-links .wp-block-social-link svg",
+		"usePrefix": true
+	  }
+	}
+  }
+}

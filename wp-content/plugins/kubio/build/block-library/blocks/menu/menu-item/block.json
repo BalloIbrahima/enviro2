@@ -1,0 +1,44 @@
+{
+	"category": "kubio-basic",
+	"parent": ["kubio/menu-base"],
+	"attributes": {
+		"id": {
+			"type": "number"
+		},
+		"parent": {
+			"type": "number"
+		},
+		"label": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"target": {
+			"type": "string"
+		},
+		"type": {
+			"type": "string"
+		},
+		"object": {
+			"type": "string"
+		},
+		"objectId": {
+			"type": "number"
+		},
+		"order": {
+			"type": "number"
+		}
+	},
+	"supports": {
+		"inserter": false,
+		"kubio": {
+			"supports": {
+				"advanced": {
+					"responsive": false
+				}
+			}
+		}
+	},
+	"usesContext": ["kubio/hideSubmenu"]
+}

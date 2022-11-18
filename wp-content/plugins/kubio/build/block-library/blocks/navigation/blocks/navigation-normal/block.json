@@ -1,0 +1,37 @@
+{
+  "name": "kubio/navigation-items",
+  "category": "kubio-basic",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	}
+  },
+  "supports": {
+	"kubio": {
+	  "elementsEnum": {
+		"OUTER": "outer"
+	  },
+	  "elementsByName": {
+		"outer": {
+		  "useBlockProps" : false,
+		  "wrapper": true,
+		  "default": true,
+		  "props" : {
+			"data-nav-normal" : "true"
+		  }
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "outer"
+		},
+		"children": [
+		  {
+			"type": "wp:InnerBlocks"
+		  }
+		]
+	  }
+	}
+  }
+}

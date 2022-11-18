@@ -1,0 +1,53 @@
+{
+	"name": "kubio/footer",
+	"title": "Footer",
+	"description": "You can replace the default page footer with a custom one using the footer template part. Various footers can be assigned to various pages.",
+	"category": "kubio-template-parts",
+	"attributes": {
+		"postId": {
+			"type": "number"
+		},
+		"slug": {
+			"type": "string"
+		},
+		"theme": {
+			"type": "string"
+		},
+		"kubio": {
+			"type": "object"
+		},
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"elementsEnum": {
+				"CONTAINER": "container",
+				"TYPOGRAPHY_HOLDERS": "typographyHolders"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true
+				},
+				"typographyHolders": {
+					"selector": " > *"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		},
+		"__experimentalDisableBlockOverlay": true
+	}
+}

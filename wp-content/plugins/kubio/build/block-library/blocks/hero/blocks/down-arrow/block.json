@@ -1,0 +1,85 @@
+{
+	"name": "kubio/downarrow",
+	"parent": [
+		"kubio/hero"
+	],
+	"usesContext": [
+		"navigation"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {
+					"descendants": {
+						"inner": {
+							"transform": {
+								"translate": [
+									{
+										"axis": "x",
+										"value": {
+											"value": 0,
+											"unit": "px"
+										}
+									},
+									{
+										"axis": "y",
+										"value": {
+											"value": 0,
+											"unit": "px"
+										}
+									}
+								]
+							}
+						}
+					}
+				},
+				"props": {
+					"bounce": true,
+					"downarrowType": "icon"
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"INNER": "inner"
+			},
+			"elementsByName": {
+				"outer": {
+					"props": {
+						"className": [
+							"h-scroll-to__outer d-flex justify-content-center h-down-arrow"
+						]
+					}
+				},
+				"inner": {
+					"wrapper": true,
+					"default": true
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "inner"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		},
+		"multiple": false
+	}
+}

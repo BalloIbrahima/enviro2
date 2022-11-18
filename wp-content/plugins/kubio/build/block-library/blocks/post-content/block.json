@@ -1,0 +1,21 @@
+{
+	"name": "core/post-content",
+	"category": "kubio-template-parts",
+	"usesContext": ["postId", "postType"],
+	"supports": {
+		"align": false,
+		"html": false,
+		"kubio": {
+			"elementsEnum": {
+				"CONTAINER": "container"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true
+				}
+			}
+		},
+		"__experimentalDisableBlockOverlay": true
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"name": "kubio/query-loop",
+	"category": "kubio-blog-components",
+	"usesContext": [
+		"queryId",
+		"query",
+		"queryContext",
+		"useMainQuery",
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object",
+			"default": {
+				"props": {
+					"layout": {
+						"equalWidth": true,
+						"equalHeight": false,
+						"itemsPerRow": 3,
+						"verticalAlign": "start"
+					}
+				}
+			}
+		},
+		"masonry": {
+			"type": "boolean",
+			"default": false
+		},
+		"notFound": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"defaults": {
+				"style": {
+					"descendants": {
+						"notfound": {
+							"typography": {},
+							"margin": {
+								"top": {
+									"value": 250,
+									"unit": "px"
+								},
+								"bottom": {
+									"value": 250,
+									"unit": "px"
+								}
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"NO_FOUND": "notfound"
+			},
+			"elementsByName": {
+				"notfound": {
+					"selector": ".kubio-empty-query-result"
+				}
+			}
+		},
+		"reusable": false,
+		"html": false
+	}
+}

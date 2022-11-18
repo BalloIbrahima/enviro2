@@ -1,0 +1,83 @@
+{
+	"attributes": {
+		"hideSubmenu": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"providesContext": {
+		"kubio/hideSubmenu": "hideSubmenu"
+	},
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {
+					"descendants": {
+						"main-menu-a": {
+							"typography": { "decoration": "none" }
+						},
+						"sub-menu-a": {
+							"typography": { "decoration": "none" }
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"MAIN_MENU_UL": "main-menu-ul",
+				"MAIN_MENU_LI": "main-menu-li",
+				"MAIN_MENU_A": "main-menu-a",
+				"MAIN_MENU_ICON": "main-menu-icon",
+				"SUB_MENU_UL": "sub-menu-ul",
+				"SUB_MENU_LI": "sub-menu-li",
+				"SUB_MENU_A": "sub-menu-a",
+				"SUB_MENU_ICON": "sub-menu-icon",
+				"FIRST_SUB_MENU_UL_BEFORE": "first-sub-menu-ul-before",
+				"FIRST_SUB_MENU_UL": "first-sub-menu-ul"
+			},
+			"elementsByName": {
+				"main-menu-ul": {
+					"selector": "> .kubio-menu > ul"
+				},
+				"main-menu-li": {
+					"selector": {
+						"normal": "> .kubio-menu  > ul > li"
+					}
+				},
+				"main-menu-a": {
+					"selector": {
+						"normal": "> .kubio-menu  > ul > li > a",
+						"hover": "> .kubio-menu  > ul > li > a:hover,> .kubio-menu > ul > li > a.hover",
+						"menuButtonActive": "> .kubio-menu > ul > li.current-menu-item > a,> .kubio-menu > ul > li.current_page_item > a"
+					}
+				},
+				"main-menu-icon": {
+					"selector": "> .kubio-menu  > ul > li > a > svg"
+				},
+				"sub-menu-ul": {
+					"selector": "> .kubio-menu  li > ul"
+				},
+				"sub-menu-li": {
+					"selector": {
+						"normal": "> .kubio-menu  li > ul > li"
+					}
+				},
+				"sub-menu-a": {
+					"selector": {
+						"normal": "> .kubio-menu  li > ul > li> a",
+						"hover": "> .kubio-menu  li > ul > li > a:hover,> .kubio-menu  li > ul > li > a.hover",
+						"menuButtonActive": "> .kubio-menu li > ul > li.current-menu-item > a,> .kubio-menu  li > ul > li.current_page_item > a"
+					}
+				},
+				"sub-menu-icon": {
+					"selector": "> .kubio-menu  li > ul > li > a > svg"
+				},
+				"first-sub-menu-ul": {
+					"selector": "> .kubio-menu > ul > li > ul"
+				},
+				"first-sub-menu-ul-before": {
+					"selector": "> .kubio-menu > ul > li > ul:before"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"name": "kubio/post-author-bio",
+	"category": "kubio-blog-components",
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"props": {},
+				"style": {
+					"descendants": {}
+				}
+			},
+			"elementsEnum": {
+				"TEXT": "text"
+			},
+			"elementsByName": {
+				"text": {
+					"default": true,
+					"wrapper": true,
+					"selector": "&.wp-block.wp-block-kubio-post-author-bio",
+					"props": {
+						"tag": "p"
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "text",
+					"shouldRender": "computed.showAuthorBio"
+				}
+			}
+		}
+	}
+}

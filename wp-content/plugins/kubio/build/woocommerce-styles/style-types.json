@@ -1,0 +1,29 @@
+{
+	"elementsEnum": {
+		"WC_BUTTON": "wc-button",
+		"WC_ALT_BUTTON": "wc-alt-button",
+		"WC_ON_SALE": "wc-on-sale"
+	},
+	"elementsByName": {
+		"wc-button": {
+			"withGlobalPrefix": true,
+			"selector": {
+				"normal": ".woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit",
+				"hover": ".woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover",
+				"disabled": ".woocommerce a.button:disabled,.woocommerce a.button[disabled], .woocommerce button.button:disabled,.woocommerce button.button[disabled], .woocommerce input.button:disabled,.woocommerce input.button[disabled], .woocommerce #respond input#submit:disabled,.woocommerce #respond input#submit[disabled]"
+			}
+		},
+		"wc-alt-button": {
+			"withGlobalPrefix": true,
+			"selector": {
+				"normal": ".woocommerce a.button.woocommerce-form-login__submit, .woocommerce a.button.add_to_cart_button, .woocommerce a.button.alt, .woocommerce button.button.woocommerce-form-login__submit, .woocommerce button.button.add_to_cart_button, .woocommerce button.button.alt, .woocommerce input.button.woocommerce-form-login__submit, .woocommerce input.button.add_to_cart_button, .woocommerce input.button.alt, .woocommerce #respond input#submit.woocommerce-form-login__submit, .woocommerce #respond input#submit.add_to_cart_button, .woocommerce #respond input#submit.alt",
+				"hover": ".woocommerce a.button.woocommerce-form-login__submit:hover, .woocommerce a.button.add_to_cart_button:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.woocommerce-form-login__submit:hover, .woocommerce button.button.add_to_cart_button:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.woocommerce-form-login__submit:hover, .woocommerce input.button.add_to_cart_button:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.woocommerce-form-login__submit:hover, .woocommerce #respond input#submit.add_to_cart_button:hover, .woocommerce #respond input#submit.alt:hover",
+				"disabled": ".woocommerce a.button.woocommerce-form-login__submit:disabled,.woocommerce a.button.woocommerce-form-login__submit[disabled], .woocommerce a.button.add_to_cart_button:disabled,.woocommerce a.button.add_to_cart_button[disabled], .woocommerce a.button.alt:disabled,.woocommerce a.button.alt[disabled], .woocommerce button.button.woocommerce-form-login__submit:disabled,.woocommerce button.button.woocommerce-form-login__submit[disabled], .woocommerce button.button.add_to_cart_button:disabled,.woocommerce button.button.add_to_cart_button[disabled], .woocommerce button.button.alt:disabled,.woocommerce button.button.alt[disabled], .woocommerce input.button.woocommerce-form-login__submit:disabled,.woocommerce input.button.woocommerce-form-login__submit[disabled], .woocommerce input.button.add_to_cart_button:disabled,.woocommerce input.button.add_to_cart_button[disabled], .woocommerce input.button.alt:disabled,.woocommerce input.button.alt[disabled], .woocommerce #respond input#submit.woocommerce-form-login__submit:disabled,.woocommerce #respond input#submit.woocommerce-form-login__submit[disabled], .woocommerce #respond input#submit.add_to_cart_button:disabled,.woocommerce #respond input#submit.add_to_cart_button[disabled], .woocommerce #respond input#submit.alt:disabled,.woocommerce #respond input#submit.alt[disabled]"
+			}
+		},
+		"wc-on-sale": {
+			"withGlobalPrefix": true,
+			"selector": ".woocommerce-loop-product__link .onsale"
+		}
+	}
+}

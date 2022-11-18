@@ -1,0 +1,164 @@
+{
+	"name": "kubio/image-gallery",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"size": {
+			"type": "string",
+			"default": "medium"
+		},
+		"imagesData": {
+			"type": "array",
+			"default": {}
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"props": {
+					"showMasonry": false,
+					"clickBehaviour": "none",
+					"caption": {
+						"enabled": false,
+						"verticalAlign": "center",
+						"position": "below"
+					},
+					"hoverEffect": {
+						"enabled": false,
+						"type": "zoom",
+						"duration": {
+							"default": {
+								"value": 0,
+								"unit": "s"
+							}
+						}
+					},
+					"columns": 4,
+					"media": {
+						"tablet": {
+							"columns": 3
+						},
+						"mobile": {
+							"columns": 2
+						}
+					}
+				},
+				"style": {
+					"descendants": {
+						"image": {
+							"transition": {
+								"duration": {
+									"value": "1",
+									"unit": "s"
+								}
+							}
+						},
+						"caption": {
+							"textAlign": "center"
+						},
+						"image-overlay": {
+							"transition": {
+								"duration": {
+									"value": "1",
+									"unit": "s"
+								}
+							},
+							"background": {
+								"color": "rgba(var(--kubio-color-1),1)"
+							}
+						},
+						"image-caption-wrapper": {
+							"margin": {
+								"top": {
+									"value": 0
+								},
+								"right": {
+									"value": 0
+								},
+								"bottom": {
+									"value": 0
+								},
+								"left": {
+									"value": 0
+								}
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"CONTAINER": "container",
+				"PLACEHOLDER": "placeholder",
+				"GALLERY": "gallery",
+				"IMAGE_CONTAINER": "image-container",
+				"IMAGE": "image",
+				"CAPTION": "caption",
+				"IMAGE_OVERLAY": "image-overlay",
+				"IMAGE_CAPTION_WRAPPER": "image-caption-wrapper"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"tag": "div"
+					}
+				},
+				"gallery": {
+					"props": {
+						"tag": "div"
+					}
+				},
+				"image": {
+					"selector": ".wp-block-kubio-image-gallery-item__image"
+				},
+				"image-container": {
+					"selector": ".image-gallery-grid-item"
+				},
+				"caption": {
+					"selector": ".wp-block-kubio-image-gallery-item__caption"
+				},
+				"image-caption-wrapper": {
+					"selector": ".wp-block-kubio-image-gallery-item__image-caption-wrapper"
+				},
+				"image-overlay": {
+					"supports": {
+						"background": true
+					},
+					"selector": ".wp-block-kubio-image-gallery-item__image-overlay"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "style",
+							"type": "text/css",
+							"tag": "style"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "gallery"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

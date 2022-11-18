@@ -1,0 +1,93 @@
+{
+  "name": "kubio/accordion",
+  "title": "Accordion",
+  "category": "kubio-components",
+  "attributes": {
+    "kubio": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "kubio": {
+      "appearanceEffect": true,
+      "default": {
+        "style": {
+          "descendants": {
+            "icon": {
+              "size": {
+                "value": 18,
+                "unit": "px"
+              },
+              "margin": {
+                "right": {
+                  "value": "0",
+                  "unit": "px"
+                }
+              }
+            },
+            "title": {
+              "textAlign": "left"
+            }
+          }
+        },
+        "props": {
+          "accordionItems": {
+            "normalIcon": "font-awesome/plus",
+            "activeIcon": "font-awesome/minus",
+            "iconPosition": "left"
+          },
+          "openMultipleItems": false
+        }
+      },
+      "elementsEnum": {
+        "OUTER": "outer",
+        "TITLE": "title",
+        "CONTENT": "content",
+        "ICON": "icon",
+        "VSPACE": "v-space",
+		"TYPOGRAPHY_HOLDERS": "typographyHolders"
+      },
+      "elementsByName": {
+        "outer": {
+          "wrapper": true,
+          "default": true,
+          "props": {
+            "className": [
+              "h-accordion"
+            ]
+          }
+        },
+        "title": {
+          "selector": ".h-accordion-item .h-accordion-item-title"
+        },
+        "content": {
+          "selector": ".h-accordion-item  .h-accordion-item-content__container"
+        },
+        "icon": {
+          "selector": {
+            "normal": " .h-accordion-item .h-accordion-item-title .h-accordion-item-title-icon",
+            "hover": " .h-accordion-item .h-accordion-item-title:hover .h-accordion-item-title-icon",
+            "customActive": ".h-accordion-item .h-accordion-item-title.h-custom-active-state .h-accordion-item-title-icon"
+          }
+        },
+        "v-space": {
+          "selector": ".h-accordion-item-content__container > *:not(:last-child)"
+        },
+		"typographyHolders": {
+		    "selector": " > *"
+		}
+      },
+      "template": {
+        "type": "element",
+        "props": {
+          "name": "outer"
+        },
+        "children": [
+          {
+            "type": "wp:InnerBlocks"
+          }
+        ]
+      }
+    }
+  }
+}

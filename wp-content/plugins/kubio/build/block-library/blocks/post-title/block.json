@@ -1,0 +1,71 @@
+{
+	"name": "kubio/post-title",
+	"category": "kubio-blog-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"headingType": {
+			"type": "string",
+			"default": "h2"
+		}
+	},
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"link": {
+							"typography": {
+								"decoration": "none"
+							}
+						}
+					}
+				},
+				"props": {}
+			},
+			"elementsEnum": {
+				"CONTAINER": "container",
+				"LINK": "link"
+			},
+			"elementsByName": {
+				"container": {
+					"tag": "h2",
+					"selector": "p.wp-block, h1.wp-block, h2.wp-block, h3.wp-block, h4.wp-block, h5.wp-block, h6.wp-block",
+					"selectorPrepend": true,
+					"wrapper": true,
+					"default": true
+				},
+				"link": {
+					"prefixWithTag": true,
+					"internal": true,
+					"props": {
+						"className": [
+							"d-block"
+						],
+						"tag": "a"
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "link"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "container"
+						}
+					}
+				]
+			}
+		}
+	}
+}

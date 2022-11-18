@@ -1,0 +1,63 @@
+{
+	"apiVersion": 2,
+	"name": "kubio/query",
+	"category": "kubio-layout",
+	"attributes": {
+		"queryId": {
+			"type": "number"
+		},
+		"useMainQuery": {
+			"type": "boolean",
+			"default": false
+		},
+		"query": {
+			"type": "object",
+			"default": {
+				"perPage": null,
+				"pages": 1,
+				"offset": 0,
+				"postType": "post",
+				"categoryIds": [],
+				"tagIds": [],
+				"order": "desc",
+				"orderBy": "date",
+				"author": "",
+				"search": "",
+				"exclude": [],
+				"sticky": ""
+			}
+		}
+	},
+	"providesContext": {
+		"queryId": "queryId",
+		"query": "query",
+		"useMainQuery": "useMainQuery"
+	},
+	"usesContext": ["postId"],
+	"supports": {
+		"inserter": false,
+		"html": false,
+		"kubio": {
+			"elementsEnum": {
+				"CONTAINER": "container"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		}
+	}
+}

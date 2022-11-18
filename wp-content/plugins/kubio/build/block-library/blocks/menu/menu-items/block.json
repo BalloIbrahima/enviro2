@@ -1,0 +1,45 @@
+{
+	"name": "kubio/menu-items",
+	"category": "kubio-basic",
+	"attributes": {
+		"location": {
+			"type": "string",
+			"default": ""
+		},
+		"id": {
+			"type": "number",
+			"default": 0
+		},
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"elementsEnum": {
+				"OUTER": "outer"
+			},
+			"elementsByName": {
+				"outer": {
+					"default": true,
+					"wrapper": true,
+					"props": {
+						"className": ["kubio-menu"]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				}
+			},
+			"supports": {
+				"advanced": {
+					"responsive": false
+				}
+			}
+		}
+	},
+	"usesContext": ["kubio/hideSubmenu"]
+}

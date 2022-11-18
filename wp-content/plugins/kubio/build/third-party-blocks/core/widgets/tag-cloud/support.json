@@ -1,0 +1,29 @@
+{
+  "name": "core/tag-cloud",
+  "kubioSupport": {
+	"elementsEnum": {
+	  "WIDGET_BOX": "widget-box",
+	  "WIDGET_LINK": "widget-link",
+	  "WIDGET_ALIGN_HOLDER": "widget-align",
+	  "WIDGET_POST_COUNT": "widget-post-count"
+	},
+	"elementsByName": {
+	  "widget-box": {
+		"default": true,
+		"wrapper": true
+	  },
+	  "widget-link": {
+		"selector": "a",
+		"usePrefix": true
+	  },
+	  "widget-align": {
+		"selector": ".wp-block-tag-cloud",
+		"usePrefix": true
+	  },
+	  "widget-post-count": {
+		"selector": "a span",
+		"usePrefix": true
+	  }
+	}
+  }
+}

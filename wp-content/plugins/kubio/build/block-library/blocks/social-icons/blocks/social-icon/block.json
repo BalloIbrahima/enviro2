@@ -1,0 +1,85 @@
+{
+	"name": "kubio/social-icon",
+	"category": "kubio-basic",
+	"parent": [
+		"kubio/social-icons"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"typeOpenLink": "sameWindow"
+			}
+		},
+		"preserveSpace": {
+			"type": "object"
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"name": "socicon/facebook"
+			}
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"LINK": "link",
+				"ICON": "icon"
+			},
+			"elementsByName": {
+				"link": {
+					"wrapper": true,
+					"prefixWithTag": true,
+					"props": {
+						"tag": "a",
+						"className": [
+							"social-icon-link"
+						]
+					}
+				},
+				"icon": {
+					"default": true,
+					"props": {
+						"tag": "icon"
+					},
+					"size": {
+						"value": 32,
+						"unit": "px"
+					},
+					"margin": {
+						"right": {
+							"value": 15,
+							"unit": "px"
+						}
+					},
+					"padding": {
+						"right": {
+							"value": 0,
+							"unit": "px"
+						}
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "link"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "icon"
+						}
+					}
+				]
+			},
+			"useParentPrefix": true
+		}
+	}
+}

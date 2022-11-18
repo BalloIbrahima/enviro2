@@ -1,0 +1,27 @@
+{
+	"name": "kubio/post-excerpt",
+	"category": "kubio-blog-components",
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"wordCount": {
+			"type": "number",
+			"default": 16
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsByName": {
+				"text": {
+					"default": true,
+					"wrapper": true,
+					"selector": false,
+					"selectorPrepend": false
+				}
+			}
+		}
+	}
+}

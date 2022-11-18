@@ -1,0 +1,130 @@
+{
+	"name": "kubio/iconlist",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+	    "anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"outer": {
+							"flexDirection": "column",
+							"justifyContent": "center",
+							"alignContent": "center"
+						},
+						"item": {},
+						"icon": {
+							"width": {
+								"value": 16,
+								"unit": "px"
+							},
+							"height": {
+								"value": 16,
+								"unit": "px"
+							}
+						},
+						"text": {
+							"margin": {
+								"left": {
+									"unit": "px",
+									"value": 10
+								}
+							}
+						},
+						"divider-wrapper": {
+							"alignItems": "center"
+						},
+						"text-wrapper": {
+							"alignItems": "center"
+						},
+						"divider": {
+							"border": {
+								"bottom": {
+									"style": "solid",
+									"width": {
+										"value": 1,
+										"unit": "px"
+									}
+								},
+								"left": {
+									"style": "solid",
+									"width": {
+										"value": 1,
+										"unit": "px"
+									}
+								}
+							}
+						}
+					}
+				},
+				"props": {
+					"divider": {
+						"enabled": false
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"ITEM": "item",
+				"LINK": "link",
+				"ICON": "icon",
+				"TEXT": "text",
+				"DIVIDER": "divider",
+				"DIVIDERWRAPPER": "divider-wrapper",
+				"TEXTWRAPPER": "text-wrapper"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"tag": "ul",
+						"className": "ul-list-icon"
+					}
+				},
+				"item": {
+					"selector": " .wp-block-kubio-iconlistitem__item"
+				},
+				"text": {
+					"selector": ".wp-block-kubio-iconlistitem__text"
+				},
+				"text-wrapper": {
+					"selector": " .wp-block-kubio-iconlistitem__text-wrapper"
+				},
+				"icon": {
+					"selector": ".wp-block-kubio-iconlistitem__icon"
+				},
+				"link": {
+					"selector": {
+						"normal": "a",
+						"hover": "a:hover, a:hover .wp-block-kubio-iconlistitem__text",
+						"visited": "a:visited, a:visited .wp-block-kubio-iconlistitem__text"
+					}
+				},
+				"divider": {
+					"selector": " .wp-block-kubio-iconlistitem__divider"
+				},
+				"divider-wrapper": {
+					"selector": " .wp-block-kubio-iconlistitem__divider-wrapper"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		}
+	}
+}

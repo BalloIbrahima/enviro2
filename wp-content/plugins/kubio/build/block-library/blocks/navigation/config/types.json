@@ -1,0 +1,19 @@
+{
+	"WidthTypes": {
+		"BOXED": "boxed",
+		"FULL_WIDTH": "full-width"
+	},
+	"NavLayoutsEnum": {
+		"LOGO_SPACING_MENU": "logo-spacing-menu",
+		"LOGO_ABOVE_MENU": "logo-above-menu",
+		"LOGO_MENU_CUSTOM": "logo-menu-custom",
+		"MENU_LOGO_CUSTOM": "menu-logo-custom",
+		"LOGO_CUSTOM_MENU_BELLOW": "logo-custom-menu-bellow",
+		"CUSTOM": "custom",
+		"SAME": "same"
+	},
+	"StickyStartAtValues": {
+		"IMMEDIATELY": "immediately",
+		"AFTER_HERO": "afterHero"
+	}
+}

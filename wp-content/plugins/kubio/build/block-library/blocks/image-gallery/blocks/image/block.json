@@ -1,0 +1,157 @@
+{
+	"name": "kubio/image-gallery-item",
+	"category": "kubio-basic",
+	"parent": [
+		"kubio/image-gallery"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"id": {
+			"type": "number"
+		},
+		"link": {
+			"type": "object"
+		},
+		"url": {
+			"type": "string"
+		},
+		"alt": {
+			"type": "string",
+			"default": ""
+		},
+		"caption": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string"
+		},
+		"sizeSlug": {
+			"type": "string",
+			"default": "large"
+		}
+	},
+	"supports": {
+		"inseter": false,
+		"kubio": {
+			"appearanceEffect": true,
+			"assetsURLImporterMap": {
+				"url": {
+					"assetIdToAttr": "id",
+					"subpath": false
+				}
+			},
+			"elementsEnum": {
+				"IMAGE_CONTAINER": "image-container",
+				"LINK": "link",
+				"IMAGE": "image",
+				"CAPTION": "caption",
+				"IMAGE_OVERLAY": "image-overlay",
+				"IMAGE_CAPTION_WRAPPER": "image-caption-wrapper"
+			},
+			"elementsByName": {
+				"image-container": {
+					"default": true,
+					"wrapper": false,
+					"props": {
+						"className": [
+							"image-gallery-grid-item"
+						],
+						"tag": "figure"
+					}
+				},
+				"image": {
+					"props": {
+						"tag": "img",
+						"filters": [
+							"wp_filter_content_tags"
+						]
+					}
+				},
+				"link": {
+					"props": {
+						"tag": "a"
+					}
+				},
+				"caption": {
+					"props": {
+						"tag": "figcaption"
+					}
+				},
+				"image-caption-wrapper": {
+					"props": {
+						"tag": "div"
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "image-container"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "image-caption-wrapper"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "link",
+									"shouldRender": "computed.linkEnabled"
+								},
+								"children": [
+									{
+										"type": "element",
+										"props": {
+											"name": "image"
+										}
+									},
+									{
+										"type": "element",
+										"props": {
+											"name": "caption",
+											"shouldRender": "computed.showCaption"
+										}
+									},
+									{
+										"type": "element",
+										"props": {
+											"name": "image-overlay",
+											"shouldRender": "computed.showOverlay"
+										}
+									}
+								]
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "image",
+									"shouldRender": "computed.linkDisabled"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "caption",
+									"shouldRender": "computed.showCaptionWithoutLink"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "image-overlay",
+									"shouldRender": "computed.showOverlayWithoutLink"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

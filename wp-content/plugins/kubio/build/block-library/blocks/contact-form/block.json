@@ -1,0 +1,157 @@
+{
+	"name": "kubio/contact",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"shortcode": {
+			"type": "string",
+			"default": ""
+		},
+		"formId": {
+			"type": "string",
+			"default": ""
+		},
+		"useShortcodeStyle": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"validationErrors": {
+							"background": {
+								"color": "#F9E4E8"
+							},
+							"typography": {
+								"color": "#E04562",
+								"fontSize": {
+									"unit": "px",
+									"value": 12
+								},
+								"fontWeight": 500,
+								"lineHeight": {
+									"unit": "em",
+									"value": 2
+								}
+							},
+							"padding": {
+								"top": {
+									"unit": "px",
+									"value": 2
+								},
+								"right": {
+									"unit": "px",
+									"value": 10
+								},
+								"bottom": {
+									"unit": "px",
+									"value": 2
+								},
+								"left": {
+									"unit": "px",
+									"value": 10
+								}
+							},
+							"margin": {
+								"top": {
+									"unit": "px",
+									"value": 5
+								},
+								"right": {
+									"unit": "px",
+									"value": 0
+								},
+								"bottom": {
+									"unit": "px",
+									"value": 16
+								},
+								"left": {
+									"unit": "px",
+									"value": 0
+								}
+							}
+						},
+						"submitButton": {
+							"textAlign": "left"
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"FORM_CONTAINER": "formContainer",
+				"FORM_WRAPPER": "formWrapper",
+				"FORM_TYPOGRAPHY": "formTypography",
+				"LABELS": "labels",
+				"FIELDS": "fields",
+				"SUBMIT_BUTTON": "submitButton",
+				"ERROR_NOTICE": "errorNotice",
+				"INFO_NOTICE": "infoNotice",
+				"SUCCESS_NOTICE": "successNotice",
+				"VALIDATION_ERRORS": "validationErrors",
+				"PLACEHOLDER": "placeholder"
+			},
+			"elementsByName": {
+				"formWrapper": {
+					"wrapper": true
+				},
+				"formContainer": {
+					"default": true
+				},
+				"formTypography": {
+					"selector": ".h-contact-form-shortcode, p, label, input, select, textarea"
+				},
+				"labels": {
+					"selector": " label,p label,.wpcf7-not-valid-tip, .wpcf7-list-item-label, .forminator-ui .forminator-row .forminator-col label, form.forminator-ui .forminator-label"
+				},
+				"fields": {
+					"selector": ".wp-block-kubio-contact__formContainer textarea,  form.forminator-ui .forminator-row .forminator-col textarea.forminator-textarea, .wp-block-kubio-contact__formContainer select, .wp-block-kubio-contact__formContainer input:not([type=\"file\"]):not([type=\"radio\"]):not([type=\"checkbox\"]):not([type=\"submit\"])"
+				},
+				"submitButton": {
+					"selector": "[type=\"submit\"], .forminator-ui .forminator-row .forminator-col .forminator-button-submit"
+				},
+				"errorNotice": {
+					"selector": ".wpcf7-mail-sent-ng, .wpcf7-aborted, .wpcf7-form.failed .wpcf7-response-output, .wpcf7-form.aborted .wpcf7-response-output, .wpcf7-validation-errors, .wpcf7-form.invalid .wpcf7-response-output,  .wpcf7-form.unaccepted .wpcf7-response-output,form.forminator-ui .forminator-response-message.forminator-error"
+				},
+				"infoNotice": {
+					"selector": "form:not(.invalid):not(.unnaccepted):not(.failed) .wpcf7-response-output:not(.wpcf7-mail-sent-ok):not(.wpcf7-mail-sent-ng), form.forminator-ui .forminator-response-message.forminator-loading"
+				},
+				"successNotice": {
+					"selector": ".wpcf7-mail-sent-ok, .wpcf7 form.sent .wpcf7-response-output, .wpforms-confirmation-container-full, .wpforms-confirmation-container, form.forminator-ui .forminator-response-message.forminator-success"
+				},
+				"validationErrors": {
+					"selector": ".forminator-row .forminator-col .forminator-error-message, form .wpcf7-not-valid-tip"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"disableStyleClasses": "computed.disableStyleClasses",
+					"name": "formWrapper"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"shouldRender": "computed.renderContainer",
+							"disableStyleClasses": "computed.disableStyleClasses",
+							"name": "formContainer"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "placeholder",
+							"shouldRender": "computed.renderPlaceholder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,583 @@
+/*
+* BACKUPLY
+* https://backuply.com
+* ( c ) Backuply Team
+*/
+
+.backuply-tab .postbox-header .hndle {
+	cursor: default;
+}
+
+/* Progress bar inside the status block */
+.backuply-upload-progress {
+  color: white;
+  display:flex;
+  flex-direction:row;
+  gap: 10px;
+}
+
+p.backuply-loc-bak-name, p.backuply-loc-restore-name{
+	font-weight: bold;
+}
+
+.backuply-upload-progress-bar{
+  background-color: #0096FF;
+  height: 20px;
+}
+
+a .dashicons {
+	text-decoration: none;
+}
+
+
+.backuply-grayscale {
+	filter : grayscale(100%);
+	transform: scale(1);
+	transition: filter 0.3s, transform 0.3s;
+	cursor: pointer;
+}
+
+.backuply-grayscale:hover {
+	filter : grayscale(0%);
+	transition: filter 0.3s, transform 0.3s;
+	transform:  scale(1.1);
+}
+
+.backuply-premium-box {
+	text-align: center;
+	border-top: 1px solid hsl(0, 0%, 90%);
+	/* background-color: 	hsl(0, 0%, 96%); */
+	/* box-shadow: 0 0 3px #c6c6c6; */
+}
+
+.backuply-loc-types-showcase {
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.backuply-loc-types-showcase li {
+	margin: 0 10px;
+}
+
+/* Check status pulsating ring */
+.backuply-ring-wrap {
+    position: relative;
+	margin-right: 10px;
+	height:100%;
+}
+
+.backuply-ring-circle {
+    width: 8px;
+    height: 8px;
+    background-color: #dc143c;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: -6px;
+}
+
+.backuply-ring-outer {
+    border: 3px solid #dc143c;
+    -webkit-border-radius: 30px;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+	left: -13px;
+	top: -2px;
+    -webkit-animation: backuply-pulsate 1.2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@-webkit-keyframes backuply-pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.backuply-tab{
+	display:none;
+}
+
+#add_backup_loc_form{
+	display:none;
+}
+
+.backuply-progress-bar {
+	background-color: #d8d8d8;
+	border-radius: 6px;
+	position: relative;
+	margin: 15px 0;
+	height: 25px;
+	width: 100%;
+}
+
+.backuply-progress-value {
+	background-color: #009ffd;
+	position:relative;
+	border-radius: 6px;
+	padding: 0 10px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 100%;
+	opacity: 1;
+	transition: 1s ease 0.3s;
+}
+
+.backuply-progress-value::after {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-image: linear-gradient(
+	-45deg, 
+	rgba(255, 255, 255, .2) 25%, 
+	transparent 25%, 
+	transparent 50%, 
+	rgba(255, 255, 255, .2) 50%, 
+	rgba(255, 255, 255, .2) 75%, 
+	transparent 75%, 
+	transparent
+	);
+	z-index: 1;
+	background-size: 50px 50px;
+	animation: backuply-move 2s linear 0s infinite;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	overflow: hidden;
+}
+
+@keyframes backuply-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.backuply-heading-2{
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.backuply-option-wrap{
+	display:flex;
+	flex-direction:column;
+	margin: 10px 0;
+	padding: 0 10px;
+}
+
+.backuply-opt-label {
+	margin: 4px;
+}
+
+.backuply-opt-label__title {
+	display:block;
+	font-weight:500;
+	font-size: 0.9rem;
+}
+
+.backuply-opt-label__helper {
+	/*will do something*/
+}
+
+.backuply-settings-block {
+	position: relative;
+	margin:10px 5px 5px 5px;
+	padding: 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.backuply-settings-block:last-child{
+	border-bottom: none;
+}
+
+.backuply-pro-block-notice{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+	z-index:5;
+	opacity: 0.4;
+}
+
+.backuply-pro-block-badge{
+	position:absolute;
+	top: -10px;
+	right: 20px;
+	background-color: #363062;
+	font-weight: bold;
+	padding: 5px 30px;
+	color: #FFF;
+	z-index: 6;
+	border-radius: 0 0 4px 4px;
+}
+
+.backuply-form-wrap {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+.backuply-form-wrap > .backuply-option-wrap {
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.backuply-cron-time {
+	display: inline-flex;
+	flex-direction: column;
+	width: calc(96%/5);
+}
+
+.backuply-code-text-wrap {
+	background-color: #000;
+	color: #FFF;
+	position:relative;
+	padding: 10px;
+	margin-top:10px;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.backuply-code-overflow {
+	width: 100%;
+	/* overflow-x: scroll; */
+	white-space: nowrap;
+}
+
+.backuply-code-text::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 15em;
+	content: '';
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1)));
+	background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); 
+}
+
+.backuply-code-copy {
+	position: absolute;
+	top : 50%;
+	transform : translateY(-50%);
+	right: 5px;
+	background-color: #3b3b3b;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.backuply-code-copied {
+	display:none;
+	position: absolute;
+	top: 50%;
+	transform : translateY(-50%);
+	right: 55px;
+	padding: 5px;
+	z-index: 20;
+	background-color: #eee;
+	color: #000;
+	border-radius: 3px;
+	font-weight: bold;
+	animation: backuply-copied 2s cubic-bezier(.19,.97,.33,.76) forwards; 
+}
+
+.backuply-code-copied::before{
+	content: "";
+	position:absolute;
+	top: 10px;
+	right: -3px;
+	width: 7px;
+	height: 7px;
+	background-color: #eee;
+	transform: rotate(45deg);
+}
+
+
+@keyframes backuply-copied {
+	0% {
+		opacity: 0.8;
+	},
+	25% {
+		opacity : 1;
+	},
+	100% {
+		opacity: 0.6;
+	}
+}
+
+.backuply-promotion-content {
+	padding: 15px;
+	border-radius: 3px;
+	background-color: #FFF;
+}
+
+/* Modal Starts here */
+.backuply-modal * {
+	box-sizing: border-box;
+}
+
+.backuply-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+.backuply-modal__inner {
+	border-radius: 2px;
+	background-color: #FAF9F6;
+	z-index: 1000;
+	width: 450px;
+	height: auto;
+	box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
+	/* backdrop-filter: blur(15px); */
+	/* border: 1px solid rgba(255,255,255,.35); */
+	padding: 0 20px;
+}
+
+.backuply-modal__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.backuply-modal-header__title {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	column-gap: 5px;
+}
+
+.backuply-modal-header__title .dashicons {
+	font-size: 1.7rem;
+	width: 25px;
+	height: 25px;
+}
+
+.backuply-modal-header__actions {
+	cursor:pointer;
+}
+
+.backuply-modal__content {
+	height: auto;
+	max-height: 600px;
+	overflow-y: auto;
+	margin : 10px 0 20px 0;
+}
+
+.backuply-backup-status {
+	background-color: black;
+	height: 30vh;
+	width: auto;
+	max-height: 30vh;
+	max-width: 100%;
+	border-radius: 2px;
+	color: #FAF9F6;
+	font-weight: 500;
+	padding: 10px;
+	overflow-y: auto;
+	word-wrap: break-word;
+	scroll-behavior: smooth;
+}
+
+.backuply-backup-status::-webkit-scrollbar {
+	width: 8px;
+}
+
+.backuply-backup-status::-webkit-scrollbar-track {
+	background: #1b1b1b;
+	border-radius: 0 2px 2px 0;
+}
+
+.backuply-backup-status::-webkit-scrollbar-thumb {
+	background: #333333;
+	border-radius: 0 2px 2px 0;
+}
+
+.backuply-modal_footer {
+	display:flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+/* Modal Ends here */
+
+.backuply-btn {
+	outline: none;
+	padding: 5px 20px;
+	border-radius: 2px;
+	line-height: 1.2;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.backuply-btn--danger {
+	background-color: #dc3545;
+	border: 1px solid #dc3545;
+	color: #FFF;
+}
+
+.backuply-btn--danger:hover {
+	background-color: #b81c2b;
+}
+
+.backuply-btn--danger:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
+
+.backuply-btn--success {
+	background-color: #66bb6a;
+	border: 1px solid #66bb6a;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.backuply-disabled {
+	cursor : default !important;
+	color: #a7aaad!important;
+	border-color: #dcdcde!important;
+	background: #f6f7f7!important;
+	box-shadow: none!important;
+	cursor: default;
+	transform: none!important;
+}
+
+.backuply-restore-last-log,
+.backuply-backup-last-log{
+	text-decoration: underline;
+	font-weight: 500;
+	color: #2271b1;
+	cursor: pointer;
+}
+
+.backuply-last-logs-block{
+	color: #FFF;
+	background-color: #000;
+	border-radius: 3px;
+	padding: 10px !important;	
+}
+
+.backuply-auto-mark{
+	background-color: #dc3545;
+	color: white;
+	border-radius: 50px;
+	font-size: 0.8em;
+	font-weight:bold;
+	padding: 1px 3px;
+}
+
+.backuply_exclude_file_block{
+	width: 100%;
+	border-radius: 20px;
+	margin: 6px 0;
+}
+
+.backuply_exclude_file_header{
+	background-color: #eee;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+.backuply-exclude-pattern-block{
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.backuply-exclude-pattern-block:nth-child(1){
+	box-shadow: 0 5px 3px #eee;
+}
+
+.backuply-exclude-pattern-block:nth-child(even){
+	background-color: #eee;
+}
+
+.backuply-pattern-insert{
+	cursor: pointer;
+}
+
+.backuply-pattern-delete{
+	cursor: pointer;
+	color: #dc3545;
+}
+
+.backuply-pattern-edit{
+	cursor: pointer;
+}
+
+.backuply-exclude-pattern-type{
+	width: 40%;
+}
+
+.backuply-exclude-pattern-val{
+	width: 60%;
+}
+
+.backuply-exclude-add-exact {
+	margin-top: 7px;
+}
+
+.backuply-js-tree::-webkit-scrollbar {
+  width: 10px;
+}
+
+.backuply-js-tree::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.backuply-js-tree::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.backuply-js-tree::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

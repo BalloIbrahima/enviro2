@@ -1,0 +1,80 @@
+{
+	"name": "kubio/tabnavigationitem",
+	"category": "kubio-basic",
+	"parent": [
+		"kubio/tabnavigation"
+	],
+	"usesContext": [
+		"title",
+		"slug",
+		"id",
+		"iconName",
+		"iconEnabled",
+		"arrayIndex"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"inseter": false,
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"LINK": "link",
+				"ICON": "icon",
+				"TEXT": "text"
+			},
+			"elementsByName": {
+				"link": {
+					"default": true,
+					"wrapper": true,
+					"prefixWithTag": true,
+					"props": {
+						"tag": "a",
+						"className": [
+							"h-tabs-navigation-item",
+							"h-global-transition"
+						]
+					}
+				},
+				"icon": {
+					"props": {
+						"tag": "icon"
+					}
+				},
+				"text": {
+					"props": {
+						"tag": "span",
+						"className": [
+							"h-tabs-navigation-item__text"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "link"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "icon",
+							"shouldRender": "computed.iconEnabled"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "text",
+							"shouldRender": "computed.shouldRenderText"
+						}
+					}
+				]
+			}
+		}
+	}
+}

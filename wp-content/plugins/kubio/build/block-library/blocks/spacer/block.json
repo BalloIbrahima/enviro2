@@ -1,0 +1,42 @@
+{
+  "name": "kubio/spacer",
+  "category": "kubio-basic",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	}
+  },
+  "supports": {
+	"kubio": {
+	  "default": {
+		"style": {
+		  "descendants": {
+			"container": {
+			  "height": {
+				"value": 50,
+				"unit": "px"
+			  }
+			}
+		  }
+		},
+		"props": {}
+	  },
+	  "elementsEnum": {
+		"CONTAINER": "container"
+	  },
+	  "elementsByName": {
+		"container": {
+		  "wrapper": true,
+		  "default": true,
+		  "className": "kubio-spacer"
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "container"
+		}
+	  }
+	}
+  }
+}

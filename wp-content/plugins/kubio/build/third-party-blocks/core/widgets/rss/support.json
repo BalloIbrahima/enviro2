@@ -1,0 +1,44 @@
+{
+  "name": "core/rss",
+  "kubioSupport": {
+	"elementsEnum": {
+	  "WIDGET_BOX": "widget-box",
+	  "WIDGET_LINK": "widget-link",
+	  "WIDGET_ALIGN_HOLDER": "widget-align",
+	  "WIDGET_DATE": "widget-date",
+	  "WIDGET_AUTHOR_NAME": "widget-author",
+	  "WIDGET_CONTENT": "widget-content",
+	  "WIDGET_LIST_ITEM": "widget-item"
+	},
+	"elementsByName": {
+	  "widget-box": {
+		"default": true,
+		"wrapper": true
+	  },
+	  "widget-link": {
+		"selector": "a",
+		"usePrefix": true
+	  },
+	  "widget-date": {
+		"selector": "time",
+		"usePrefix": true
+	  },
+	  "widget-author": {
+		"selector": "span.wp-block-rss__item-author",
+		"usePrefix": true
+	  },
+	  "widget-content": {
+		"selector": "div.wp-block-rss__item-excerpt",
+		"usePrefix": true
+	  },
+	  "widget-align": {
+		"selector": "&.wp-block-rss",
+		"usePrefix": true
+	  },
+	  "widget-item": {
+		"selector": "li",
+		"usePrefix": true
+	  }
+	}
+  }
+}

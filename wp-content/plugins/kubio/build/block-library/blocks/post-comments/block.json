@@ -1,0 +1,176 @@
+{
+	"name": "kubio/post-comments",
+	"category": "kubio-blog-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"prefix": {
+			"type": "string",
+			"default": ""
+		},
+		"noCommentsTitle": {
+			"type": "string",
+			"default": "No responses yet"
+		},
+		"oneCommentTitle": {
+			"type": "string",
+			"default": "One response"
+		},
+		"avatarSize": {
+			"type": "string",
+			"default": "50"
+		},
+		"multipleComments": {
+			"type": "string",
+			"default": "{COMMENTS-COUNT} Responses"
+		},
+		"commentsDisabled": {
+			"type": "string",
+			"default": "Comments are closed"
+		}
+	},
+	"usesContext": ["postId", "postType"],
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {
+					"descendants": {
+						"commentReplies": {
+							"margin": {
+								"left": {
+									"value": 20,
+									"unit": "px"
+								}
+							}
+						},
+						"commentAvatar": {
+							"border": {
+								"top": {
+									"radius": {
+										"left": {
+											"value": 100,
+											"unit": "%"
+										},
+										"right": {
+											"value": 100,
+											"unit": "%"
+										}
+									}
+								},
+								"bottom": {
+									"radius": {
+										"left": {
+											"value": 100,
+											"unit": "%"
+										},
+										"right": {
+											"value": 100,
+											"unit": "%"
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				"props": {}
+			},
+			"elementsEnum": {
+				"CONTAINER": "commentsContainer",
+				"NUMBER": "commentsTitle",
+				"CLOSED": "disabledComments",
+				"EVEN": "comment",
+				"ODD": "alternateComment",
+				"AVATAR": "commentAvatar",
+				"AUTHOR_NAME": "commentAuthorName",
+				"AUTHOR_LINK": "commentAuthorLink",
+				"DATE": "commentDate",
+				"EDIT": "commentEdit",
+				"CONTENT": "commentText",
+				"REPLY_LINK": "commentReply",
+				"REPLY_FORM": "commentReplyForm",
+				"REPLIES": "commentReplies",
+
+				"COMMENT_META_CONTAINER": "commentInfoContainer",
+				"COMMENT_META": "commentInfo",
+
+				"TYPOGRAPHY_HOLDERS_CONTAINER": "typographyHoldersContainer",
+				"TYPOGRAPHY_HOLDERS_CONTENT": "typographyHoldersContent",
+				"TYPOGRAPHY_HOLDERS_REPLY_FORM": "typographyHoldersReplyForm"
+			},
+			"elementsByName": {
+				"commentsContainer": {
+					"wrapper": true,
+					"default": true
+				},
+				"commentsTitle": {
+					"selector": ".comments-title"
+				},
+				"disabledComments": {
+					"selector": ".comments-disabled"
+				},
+				"comment": {
+					"selector": ".comment.even"
+				},
+				"alternateComment": {
+					"selector": ".comment.odd"
+				},
+
+				"commentAvatar": {
+					"selector": ".comment-author img"
+				},
+
+				"commentAuthorName": {
+					"selector": ".comment-author .fn"
+				},
+
+				"commentAuthorLink": {
+					"selector": ".comment-author .fn a"
+				},
+				"commentDate": {
+					"selector": ".comment-metadata > a"
+				},
+
+				"commentEdit": {
+					"selector": ".comment-metadata > .edit-link > a"
+				},
+
+				"commentText": {
+					"selector": ".comment-content"
+				},
+				"commentReply": {
+					"selector": ".comment-body .reply a"
+				},
+
+				"commentReplyForm": {
+					"selector": ".comment-body .comment-respond"
+				},
+				"commentReplies": {
+					"selector": ".comment  > .children"
+				},
+				"commentInfoContainer": {
+					"selector": ".comment-meta"
+				},
+				"commentInfo": {
+					"selector": ".comment-metadata"
+				},
+				"typographyHoldersContainer": {
+				  "selector": " > *"
+				},
+				"typographyHoldersContent": {
+				  "selector": " .comment-content > *"
+				},
+				"typographyHoldersReplyForm": {
+				  "selector": " .comment-body .comment-respond > *"
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "commentsContainer"
+				}
+			}
+		}
+	}
+}

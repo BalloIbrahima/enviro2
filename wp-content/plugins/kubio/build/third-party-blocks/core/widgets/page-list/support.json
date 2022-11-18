@@ -1,0 +1,34 @@
+{
+  "name": "core/page-list",
+  "kubioSupport": {
+	"elementsEnum": {
+	  "WIDGET_BOX": "widget-box",
+	  "WIDGET_LINK": "widget-link",
+	  "WIDGET_ALIGN_HOLDER": "widget-align",
+	  "WIDGET_LIST_ITEM": "widget-item",
+	  "WIDGET_LIST": "widget-list"
+	},
+	"elementsByName": {
+	  "widget-box": {
+		"default": true,
+		"wrapper": true
+	  },
+	  "widget-link": {
+		"selector": "a",
+		"usePrefix": true
+	  },
+	  "widget-align": {
+		"selector": "&.wp-block-page-list",
+		"usePrefix": true
+	  },
+	  "widget-item": {
+		"selector": "&.wp-block-page-list li",
+		"usePrefix": true
+	  },
+	  "widget-list": {
+		"selector": "&.wp-block-page-list",
+		"usePrefix": true
+	  }
+	}
+  }
+}

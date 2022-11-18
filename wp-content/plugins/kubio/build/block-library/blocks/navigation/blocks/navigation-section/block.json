@@ -1,0 +1,55 @@
+{
+	"name": "kubio/navigation-section",
+	"category": "kubio-layout",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"elementsEnum": {
+				"NAVIGATION": "nav",
+				"NAVIGATION_SECTION": "nav-section"
+			},
+
+			"elementsByName": {
+				"nav": {
+				  	"internal" : true,
+					"default": true,
+					"ancestor": "sticky",
+					"props": {
+						"className": ["h-section", "h-navigation"]
+					}
+				},
+				"nav-section": {
+				  "internal" : true,
+					"props": {
+						"className": [
+							"h-section-grid-container h-section-fluid-container"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "nav"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "nav-section"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

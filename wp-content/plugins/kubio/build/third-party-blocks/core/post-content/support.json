@@ -1,0 +1,14 @@
+{
+	"name": "core/post-content",
+	"kubioSupport": {
+		"elementsEnum": {
+			"CONTAINER": "container"
+		},
+		"elementsByName": {
+			"container": {
+				"default": true,
+				"wrapper": true
+			}
+		}
+	}
+}

@@ -1,0 +1,151 @@
+{
+	"name": "kubio/video",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"displayAs": {
+			"type": "string",
+			"default": "video"
+		},
+		"videoCategory": {
+			"type": "string",
+			"default": "internal"
+		},
+		"internalUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"youtubeUrl": {
+			"type": "string",
+			"default": "https://www.youtube.com/watch?v=IshAk6Mwlj4&ab_channel=Kubio"
+		},
+		"vimeoUrl": {
+			"type": "string",
+			"default": "https://vimeo.com/655007132"
+		},
+		"aspectRatio": {
+			"type": "string",
+			"default": "16-9"
+		},
+		"playerOptions": {
+			"type": "object",
+			"default": {
+				"startTime": "",
+				"endTime": "",
+				"autoplay": false,
+				"mute": false,
+				"loop": false,
+				"playerControls": true,
+				"modestBranding": false,
+				"suggestedVideo": false,
+				"privacyMode": false,
+				"controlsColor": "",
+				"introTitle": true,
+				"introPortrait": true,
+				"introByLine": true
+			}
+		},
+		"posterImage": {
+			"type": "object",
+			"default": {
+				"id": "",
+				"url": "",
+				"dimension": "auto",
+				"lightbox": false,
+				"playAction": "icon",
+				"sizeSlug": ""
+			}
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"assetsURLImporterMap": {
+				"internalUrl": {
+					"assetIdToAttr": "id",
+					"subpath": false
+				},
+				"posterImage.url": {
+					"assetIdToAttr": "posterImage.id",
+					"subpath": false
+				}
+			},
+			"default": {
+				"style": {
+					"descendants": {
+						"poster": {
+							"background": {
+								"type": "image",
+								"image": [
+									{
+										"source": {
+											"type": "image",
+											"url": ""
+										}
+									}
+								]
+							}
+						}
+					}
+				},
+				"props": {}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"VIDEO": "video",
+				"POSTER": "poster",
+				"LIGHTBOX": "lightbox"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true
+				},
+				"poster": {},
+				"video": {},
+				"lightbox": {}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "poster",
+							"shouldRender": "computed.displayAsPoster"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "lightbox",
+							"shouldRender": "computed.displayAsIconWithLightbox"
+						},
+						"children": [
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "video"
+						}
+					}
+				]
+			}
+		}
+	}
+}

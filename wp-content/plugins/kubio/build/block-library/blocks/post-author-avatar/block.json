@@ -1,0 +1,68 @@
+{
+	"name": "kubio/post-author-avatar",
+	"category": "kubio-blog-components",
+	"usesContext": [
+		"postId",
+		"postType"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"addLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"url": {
+			"type": "string"
+		},
+		"avatarSize": {
+			"type": "string",
+			"default": "50"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"OUTER": "outer",
+				"IMAGE": "image"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"props": {
+						"className": [
+							"author-avatar-block"
+						]
+					}
+				},
+				"image": {
+					"default": true,
+					"props": {
+						"tag": "img"
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "LinkWrapper",
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "image"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

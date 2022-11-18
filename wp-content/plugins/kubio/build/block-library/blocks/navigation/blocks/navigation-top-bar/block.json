@@ -1,0 +1,77 @@
+{
+  "name": "kubio/navigation-top-bar",
+  "title": "Navigation Top Bar",
+  "category": "kubio-layout",
+  "attributes": {
+    "kubio": {
+      "type": "object"
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "attrs": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "kubio": {
+      "elementsEnum": {
+        "OUTER": "outer",
+        "INNER": "inner",
+		"TYPOGRAPHY_HOLDERS": "typographyHolders"
+      },
+      "elementsByName": {
+        "outer": {
+          "wrapper": true,
+          "default": true,
+          "props": {
+            "className": [
+              "d-flex"
+            ]
+          }
+        },
+        "inner": {
+          "props": {
+            "className": [
+              "h-section-grid-container"
+            ]
+          }
+        },
+		"typographyHolders": {
+		    "selector": " > *"
+		}
+      },
+      "template": {
+        "type": "element",
+        "props": {
+          "name": "outer"
+        },
+        "children": [
+          {
+            "type": "background"
+          },
+          {
+            "type": "separators"
+          },
+          {
+            "type": "element",
+            "props": {
+              "name": "inner"
+            },
+            "children": [
+              {
+                "type": "wp:InnerBlocks"
+              }
+            ]
+          }
+        ]
+      },
+      "default": {
+        "props": {
+          "width": "full-width",
+          "verticalAlign": "center"
+        }
+      }
+    }
+  }
+}

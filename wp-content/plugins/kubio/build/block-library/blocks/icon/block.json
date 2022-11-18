@@ -1,0 +1,77 @@
+{
+	"name": "kubio/icon",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"typeOpenLink": "sameWindow"
+			}
+		},
+		"name": {
+			"type": "string",
+			"default": "font-awesome/star"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"OUTER": "outer",
+				"INNER": "inner"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true
+				},
+				"inner": {
+					"default": true,
+					"props": {
+						"tag": "icon",
+						"className": [
+							"h-global-transition"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "LinkWrapper",
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "inner"
+								}
+							}
+						]
+					}
+				]
+			},
+			"default": {
+				"style": {
+					"descendants": {
+						"inner": {
+							"width": {
+								"value": "100",
+								"unit": "px"
+							},
+							"height": {
+								"value": "100",
+								"unit": "px"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

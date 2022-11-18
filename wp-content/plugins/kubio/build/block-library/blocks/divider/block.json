@@ -1,0 +1,150 @@
+{
+	"name": "kubio/divider",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"iconName": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"props": {
+					"type": "icon"
+				},
+				"style": {
+					"descendants": {
+						"line": {
+							"border": {
+								"top": {
+									"style": "none"
+								},
+								"left": {
+									"style": "none"
+								},
+								"right": {
+									"style": "none"
+								},
+								"bottom": {
+									"color": "rgba(var(--kubio-color-1),1)",
+									"style": "solid",
+									"width": {
+										"value": 3,
+										"unit": "px"
+									}
+								}
+							}
+						},
+						"width-container": {
+							"width": {
+								"value": 100,
+								"unit": "px"
+							}
+						},
+						"outer": {
+							"padding": {
+								"top": {
+									"value": 10,
+									"unit": "px"
+								},
+								"bottom": {
+									"value": 10,
+									"unit": "px"
+								}
+							}
+						},
+						"inner": {
+							"fill": "rgba(var(--kubio-color-1),1)",
+							"width": {
+								"value": 40,
+								"unit": "px"
+							},
+							"height": {
+								"value": 40,
+								"unit": "px"
+							},
+							"margin": {
+								"left": {
+									"value": "10",
+									"unit": "px"
+								},
+								"right": {
+									"value": "10",
+									"unit": "px"
+								}
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"LINE": "line",
+				"INNER": "inner",
+				"WIDTH_CONTAINER": "width-container"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true,
+					"className": [
+						"kubio-divider"
+					]
+				},
+				"width-container": {
+					"internal": true
+				},
+				"line": {
+					"className": [
+						"canvas-divider"
+					]
+				},
+				"inner": {
+					"props": {
+						"tag": "icon"
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "width-container"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "line"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "inner",
+									"shouldRender": "computed.iconEnabled"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "line",
+								    "shouldRender": "computed.iconEnabled"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

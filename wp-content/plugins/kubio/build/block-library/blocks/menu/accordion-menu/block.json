@@ -1,0 +1,160 @@
+{
+	"name": "kubio/accordion-menu",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"default": {
+				"style": {
+					"descendants": {
+						"main-menu-a": {
+							"border": {
+								"bottom": {
+									"width": {
+										"unit": "px",
+										"value": "1"
+									},
+									"style": "solid",
+									"color": "#808080"
+								},
+								"top": {
+									"style": "solid",
+									"color": "#808080"
+								},
+								"left": {
+									"style": "solid",
+									"color": "#808080"
+								},
+								"right": {
+									"style": "solid",
+									"color": "#808080"
+								}
+							},
+							"typography": {
+								"size": {
+									"value": 14,
+									"unit": "px"
+								}
+							},
+							"padding": {
+								"top": {
+									"unit": "px",
+									"value": "12"
+								},
+								"bottom": {
+									"unit": "px",
+									"value": "12"
+								},
+								"left": {
+									"unit": "px",
+									"value": "40"
+								}
+							}
+						},
+						"sub-menu-a": {
+							"border": {
+								"bottom": {
+									"width": {
+										"unit": "px",
+										"value": "1"
+									},
+									"style": "solid",
+									"color": "#808080"
+								},
+								"top": {
+									"style": "solid",
+									"color": "#808080"
+								},
+								"left": {
+									"style": "solid",
+									"color": "#808080"
+								},
+								"right": {
+									"style": "solid",
+									"color": "#808080"
+								}
+							},
+							"padding": {
+								"top": {
+									"unit": "px",
+									"value": "12"
+								},
+								"bottom": {
+									"unit": "px",
+									"value": "12"
+								},
+								"left": {
+									"unit": "px",
+									"value": "40"
+								}
+							},
+							"typography": {
+								"size": {
+									"value": 14,
+									"unit": "px"
+								}
+							}
+						},
+						"main-menu-icon": {
+							"padding": {
+								"left": {
+									"value": 20,
+									"unit": "px"
+								},
+								"right": {
+									"value": 20,
+									"unit": "px"
+								}
+							}
+						},
+						"sub-menu-icon": {
+							"padding": {
+								"left": {
+									"value": 20,
+									"unit": "px"
+								},
+								"right": {
+									"value": 20,
+									"unit": "px"
+								}
+							}
+						},
+						"main-menu-ul": {
+							"--kubio-accordion-menu-offset": {
+								"value": 10,
+								"unit": "px"
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer"
+			},
+			"elementsByName": {
+				"outer": {
+					"default": true,
+					"wrapper": true,
+					"props": {
+						"className": ["kubio-accordion-menu", "h-ignore-global-body-typography"]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		}
+	}
+}

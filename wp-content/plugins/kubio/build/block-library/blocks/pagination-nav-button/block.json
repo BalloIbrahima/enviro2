@@ -1,0 +1,76 @@
+{
+	"name": "kubio/pagination-nav-button",
+	"category": "kubio-blog-components",
+	"usesContext": [
+		"queryId",
+		"query",
+		"queryContext",
+		"useMainQuery"
+	],
+	"parent": null,
+	"attributes": {
+		"action": {
+			"type": "string",
+			"default": "prev"
+		}
+	},
+	"supports": {
+	  "kubio": {
+		"elementsEnum": {
+		  "SPACING": "spacing"
+		},
+		"elementsByName": {
+		  "spacing": {
+			"tag": "div",
+			"className": ["h-w-100"],
+			"wrapper": false,
+			"default": false
+		  }
+		},
+		"template": {
+		  "type": "element",
+		  "props": {
+			"name": "spacing"
+		  },
+		  "children": [
+			{
+			  "type": "element",
+			  "props": {
+				"name": "outer"
+			  },
+			  "children": [
+				{
+				  "type": "element",
+				  "props": {
+					"name": "link"
+				  },
+				  "children": [
+					{
+					  "type": "element",
+					  "props": {
+						"name": "icon",
+						"shouldRender": "computed.showBeforeIcon"
+					  }
+					},
+					{
+					  "type": "element",
+					  "props": {
+						"name": "text"
+					  }
+					},
+					{
+					  "type": "element",
+					  "props": {
+						"name": "icon",
+						"shouldRender": "computed.showAfterIcon"
+					  }
+					}
+				  ]
+				}
+			  ]
+			}
+		  ]
+		}
+	  }
+	}
+}

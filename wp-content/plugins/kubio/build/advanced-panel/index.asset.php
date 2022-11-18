@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('kubio-admin-panel', 'kubio-constants', 'kubio-controls', 'kubio-core', 'kubio-inspectors', 'kubio-style-manager', 'lodash', 'wp-components', 'wp-compose', 'wp-data', 'wp-element', 'wp-i18n', 'wp-polyfill'), 'version' => '534b4971d33a1af7024ab66738c08df3');

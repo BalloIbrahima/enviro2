@@ -1,0 +1,134 @@
+{
+	"name": "kubio/button",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"default": "Button text"
+		},
+		"link": {
+			"type": "object"
+		},
+		"preserveSpace": {
+			"type": "object"
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"name": null
+			}
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"link": {
+							"justifyContent": "center",
+							"typography": { "decoration": "none" }
+						},
+						"icon": {
+							"margin": {
+								"left": {
+									"value": 10
+								},
+								"right": {
+									"value": 10
+								}
+							}
+						}
+					}
+				},
+				"props": {
+					"buttonSize": "medium",
+					"buttonWidth": "fitToContent",
+					"showIcon": false,
+					"iconPosition": "before"
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"LINK": "link",
+				"ICON": "icon",
+				"TEXT": "text"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"props": {
+						"tag": "span",
+						"className": ["kubio-button-container"]
+					}
+				},
+				"link": {
+					"default": true,
+					"prefixWithTag": true,
+					"useWrapperPrefix": true,
+					"props": {
+						"tag": "a",
+						"className": ["h-w-100", "h-global-transition"]
+					}
+				},
+				"text": {
+					"props": {
+						"tag": "span",
+						"className": ["kubio-inherit-typography"]
+					}
+				},
+				"icon": {
+					"props": {
+						"tag": "icon"
+					},
+					"statesConfig": {
+						"default": {
+							"stateRedirectElement": "link"
+						}
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "link"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "icon",
+									"shouldRender": "computed.showBeforeIcon"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "text"
+								}
+							},
+							{
+								"type": "element",
+								"props": {
+									"name": "icon",
+									"shouldRender": "computed.showAfterIcon"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

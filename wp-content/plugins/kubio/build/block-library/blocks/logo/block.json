@@ -1,0 +1,132 @@
+{
+	"name": "kubio/logo",
+	"category": "kubio-site-data",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"imageUrl": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "src"
+		},
+		"linkTo": {
+			"type": "string",
+			"default": "homePage"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"typeOpenLink": "sameWindow"
+			}
+		},
+		"mode": {
+			"type": "string",
+			"default": "autodetect-mode"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"container": {
+							"gap": {
+								"value": "10",
+								"unit": "px"
+							},
+							"typography": { "decoration": "none" }
+						},
+						"image": {
+							"maxHeight": {
+								"value": "70",
+								"unit": "px"
+							}
+						},
+						"generalImage": {
+							"maxHeight": {
+								"value": 70,
+								"unit": "px"
+							}
+						}
+					}
+				},
+				"props": {
+					"layoutType": "image"
+				}
+			},
+			"elementsEnum": {
+				"CONTAINER": "container",
+				"IMAGE": "image",
+				"ALTERNATE_IMAGE": "alternateImage",
+				"GENERAL_IMAGE_STYLE": "generalImage",
+				"TEXT": "text",
+			    "LOGO_TEXT": "logo-text"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"tag": "a",
+						"className": ["kubio-has-gap-fallback"]
+					}
+				},
+				"image": {
+					"props": {
+						"tag": "img",
+						"className": ["kubio-logo-image"]
+					}
+				},
+				"alternateImage": {
+					"props": {
+						"tag": "img",
+						"className": [
+							"kubio-logo-image",
+							"kubio-alternate-logo-image"
+						]
+					}
+				},
+				"text": {
+					"props": {
+						"tag": "span"
+					}
+				},
+				"generalImage": {
+					"selector": "& .kubio-logo-image"
+				},
+			   "logo-text": {}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "image",
+							"shouldRender": "computed.showNormalImage"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "alternateImage",
+							"shouldRender": "computed.showAlternateImage"
+						}
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "text"
+						}
+					}
+				]
+			}
+		}
+	}
+}

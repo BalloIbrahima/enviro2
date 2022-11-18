@@ -1,0 +1,125 @@
+{
+	"name": "kubio/tab",
+	"category": "kubio-components",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"props": {
+					"layout": "horizontal",
+					"icons": {
+						"show": false
+					},
+					"tabItemsWidth": {
+						"horizontal": "auto",
+						"vertical": "auto"
+					},
+					"media": {
+						"mobile": {
+							"tabItemsWidth": {
+								"horizontal": "full",
+								"vertical": "full"
+							}
+						}
+					}
+				},
+				"style": {
+					"descendants": {
+						"tabItemText": {
+							"margin": {
+								"left": {
+									"value": 10,
+									"unit": "px"
+								}
+							}
+						},
+						"icons": {
+							"size": {
+								"value": 20,
+								"unit": "px"
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"OUTER": "outer",
+				"CONTENT": "content",
+				"TAB_BAR": "tabBar",
+				"TAB_BAR_HORIZONTAL": "tabBarHorizontal",
+				"TAB_ITEM_HORIZONTAL": "tabItemHorizontal",
+				"TAB_BAR_VERTICAL": "tabBarVertical",
+				"TAB_ITEM_VERTICAL": "tabItemVertical",
+				"TAB_ITEM": "tabItem",
+				"ICONS": "icons",
+				"TAB_ITEM_TEXT": "tabItemText",
+				"VSPACE": "v-space",
+			    "TYPOGRAPHY_HOLDERS": "typographyHolders"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"className": [
+							"h-tabs"
+						]
+					}
+				},
+				"content": {
+					"selector": ".h-tabs-item-content"
+				},
+				"tabBar": {
+					"selector": " > .h-tabs-navigation"
+				},
+				"tabBarHorizontal": {
+					"selector": "&.h-tabs-horizontal > .h-tabs-navigation"
+				},
+				"tabItemHorizontal": {
+					"selector": "&.h-tabs-horizontal > .h-tabs-navigation .h-tabs-navigation-item"
+				},
+				"tabBarVertical": {
+					"selector": "&.h-tabs-vertical > .h-tabs-navigation"
+				},
+				"tabItemVertical": {
+					"selector": "&.h-tabs-vertical > .h-tabs-navigation .h-tabs-navigation-item"
+				},
+				"tabItem": {
+					"selector": {
+						"normal": " > .h-tabs-navigation .h-tabs-navigation-item",
+						"hover": " > .h-tabs-navigation .h-tabs-navigation-item:not(.h-custom-active-state):hover",
+						"customActive": " > .h-tabs-navigation .h-tabs-navigation-item.h-custom-active-state"
+					}
+				},
+				"icons": {
+					"selector": " > .h-tabs-navigation .h-svg-icon"
+				},
+				"tabItemText": {
+					"selector": " > .h-tabs-navigation .h-svg-icon + .h-tabs-navigation-item__text"
+				},
+				"v-space": {
+					"selector": ".h-tabs-item-content > .h-y-container > *:not(:last-child)"
+				},
+			  "typographyHolders": {
+				"selector": " > *"
+			  }
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		}
+	}
+}

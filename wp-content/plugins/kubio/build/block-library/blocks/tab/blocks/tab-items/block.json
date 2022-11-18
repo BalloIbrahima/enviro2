@@ -1,0 +1,45 @@
+{
+	"name": "kubio/tabitems",
+	"category": "kubio-basic",
+	"parent": [
+		"kubio/tab"
+	],
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		}
+	},
+	"supports": {
+		"inseter": false,
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"OUTER": "outer"
+			},
+			"elementsByName": {
+				"outer": {
+					"wrapper": true,
+					"default": true,
+					"props": {
+						"className": [
+							"d-flex",
+							"h-tabs-item-content__container",
+							"h-tabs-item__container"
+						]
+					}
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "wp:InnerBlocks"
+					}
+				]
+			}
+		}
+	}
+}

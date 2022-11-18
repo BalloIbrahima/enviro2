@@ -1,0 +1,39 @@
+{
+	"name": "core/calendar",
+	"kubioSupport": {
+		"elementsEnum": {
+			"WIDGET_BOX": "widget-box",
+			"WIDGET_LINK": "widget-link",
+			"WIDGET_TABLE_HEAD": "widget-table-head",
+			"WIDGET_ALIGN_HOLDER": "widget-align",
+		  	"WIDGET_TABLE_BODY": "widget-table-body",
+		  	"WIDGET_TODAY": "widget-today"
+		},
+		"elementsByName": {
+			"widget-box": {
+				"default": true,
+				"wrapper": true
+			},
+			"widget-link": {
+				"selector": "a",
+				"usePrefix": true
+			},
+			"widget-align": {
+				"selector": ".wp-block-calendar, .wp-block-calendar table",
+				"usePrefix": true
+			},
+			"widget-table-head": {
+				"selector": "thead th",
+				"usePrefix": true
+			},
+			"widget-table-body": {
+				"selector": "td, th",
+				"usePrefix": true
+			},
+			"widget-today": {
+				"selector": "#today a, #today",
+				"usePrefix": true
+			}
+		}
+	}
+}

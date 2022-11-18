@@ -1,0 +1,57 @@
+{
+	"name": "kubio/page-title",
+	"category": "kubio-site-data",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"templates": {
+			"type": "object",
+			"default": {
+				"normalPage": "{TITLE}",
+				"normalResultsPage": "Search results for: {TITLE}",
+				"errorPage": "Sorry! Page Not Found!",
+				"singlePost": "{TITLE}",
+				"categoryArchive": "Posts in {TITLE}",
+				"authorArchive": "Posts by {TITLE}",
+				"tagArchive": "Posts about {TITLE}",
+				"yearArchive": "Posts from {TITLE}",
+				"monthArchive": "Posts from {TITLE}",
+				"dayArchive": "Posts from {TITLE}"
+			}
+		}
+	},
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"textAlign": "center"
+				},
+				"props": {
+					"level": "h1"
+				}
+			},
+			"elementsEnum": {
+				"CONTAINER": "container"
+			},
+			"elementsByName": {
+				"container": {
+					"wrapper": true,
+					"default": true,
+					"selector": "p.wp-block, h1.wp-block, h2.wp-block, h3.wp-block, h4.wp-block, h5.wp-block, h6.wp-block",
+					"selectorPrepend": true,
+					"className": [
+						"kubio-page-title"
+					]
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "container"
+				}
+			}
+		}
+	}
+}

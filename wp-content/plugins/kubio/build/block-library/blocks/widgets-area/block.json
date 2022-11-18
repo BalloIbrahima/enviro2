@@ -1,0 +1,35 @@
+{
+  "name": "kubio/widget-area",
+  "category": "kubio-blog-components",
+  "attributes": {
+	"kubio": {
+	  "type": "object"
+	},
+	"id": {
+	  "type": "string",
+	  "default": ""
+	}
+  },
+  "supports": {
+	"kubio": {
+	  "elementsEnum": {
+		"CONTAINER": "container"
+	  },
+	  "elementsByName": {
+		"container": {
+		  "default": true,
+		  "wrapper": true,
+		  "props": {
+			"tag": "div"
+		  }
+		}
+	  },
+	  "template": {
+		"type": "element",
+		"props": {
+		  "name": "container"
+		}
+	  }
+	}
+  }
+}

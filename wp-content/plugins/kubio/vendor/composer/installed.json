@@ -1,0 +1,974 @@
+[
+    {
+        "name": "lodash-php/lodash-php",
+        "version": "0.0.7",
+        "version_normalized": "0.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lodash-php/lodash-php.git",
+            "reference": "9083fdc398db5594b3d6909338d8b824e661955b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lodash-php/lodash-php/zipball/9083fdc398db5594b3d6909338d8b824e661955b",
+            "reference": "9083fdc398db5594b3d6909338d8b824e661955b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1",
+            "sebastian/comparator": "^1.2 | ^2.0 | ^2.1 | ^3.0 | ^4.0",
+            "symfony/property-access": "^2.7 | ^3.0 | ^4.0 | ^5.0"
+        },
+        "require-dev": {
+            "bamarni/composer-bin-plugin": "^1.2",
+            "phpdocumentor/reflection-docblock": "^4.2",
+            "phpstan/phpdoc-parser": "^0.3.0"
+        },
+        "time": "2020-09-21T11:55:26+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pierre du Plessis",
+                "email": "open-source@solidworx.co"
+            }
+        ],
+        "description": "A port of Lodash to PHP",
+        "keywords": [
+            "lodash",
+            "php-library",
+            "php-utility",
+            "utilities",
+            "utility",
+            "utility-library"
+        ]
+    },
+    {
+        "name": "pragmarx/ia-arr",
+        "version": "v7.3.1",
+        "version_normalized": "7.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/antonioribeiro/ia-arr.git",
+            "reference": "e0107e68bbce8736f6e19c796a5511b741ced227"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/antonioribeiro/ia-arr/zipball/e0107e68bbce8736f6e19c796a5511b741ced227",
+            "reference": "e0107e68bbce8736f6e19c796a5511b741ced227",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0",
+            "symfony/var-dumper": "~3.3|~4.0|~5.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "~1.0",
+            "nesbot/carbon": "^1.26 || ^2.00",
+            "phpunit/phpunit": "~6.0|~7.0|~8.0|~9.0",
+            "squizlabs/php_codesniffer": "^2.3"
+        },
+        "suggest": {
+            "nesbot/carbon": "Required to use Carbon datetime."
+        },
+        "time": "2020-03-26T08:59:52+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "IlluminateAgnostic\\Arr\\": "src/",
+                "IlluminateAgnostic\\Arr\\Tests\\": "tests/"
+            },
+            "files": [
+                "src/Support/helpers.php",
+                "src/Support/alias.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Antonio Carlos Ribeiro",
+                "email": "acr@antoniocarlosribeiro.com",
+                "homepage": "https://antoniocarlosribeiro.com",
+                "role": "Creator"
+            }
+        ],
+        "description": "Laravel Illuminate Agnostic Arr",
+        "homepage": "https://github.com/antonioribeiro/ia-arr",
+        "keywords": [
+            "arr",
+            "array",
+            "helpers",
+            "laravel",
+            "pragmarx"
+        ]
+    },
+    {
+        "name": "pragmarx/ia-str",
+        "version": "v7.3.0",
+        "version_normalized": "7.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/antonioribeiro/ia-str.git",
+            "reference": "6f0c981d3b16cd9715366a6d5f452df0654cbcc4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/antonioribeiro/ia-str/zipball/6f0c981d3b16cd9715366a6d5f452df0654cbcc4",
+            "reference": "6f0c981d3b16cd9715366a6d5f452df0654cbcc4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0",
+            "voku/portable-ascii": "^1.4"
+        },
+        "require-dev": {
+            "doctrine/inflector": "^1.2",
+            "mockery/mockery": "~1.0",
+            "moontoast/math": "^1.1",
+            "nesbot/carbon": "^1.26 || ^2.00",
+            "phpunit/phpunit": "~6.0|~7.0|~8.0|~9.0",
+            "ramsey/uuid": "^3.7|^4.0",
+            "squizlabs/php_codesniffer": "^2.3",
+            "symfony/var-dumper": "~3.3|~4.0|~5.0"
+        },
+        "suggest": {
+            "doctrine/inflector": "",
+            "nesbot/carbon": "",
+            "ramsey/uuid": "",
+            "symfony/var-dumper": ""
+        },
+        "time": "2020-03-26T08:45:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "IlluminateAgnostic\\Str\\": "src/",
+                "IlluminateAgnostic\\Str\\Tests\\": "tests/"
+            },
+            "files": [
+                "src/Support/helpers.php",
+                "src/Support/alias.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Antonio Carlos Ribeiro",
+                "email": "acr@antoniocarlosribeiro.com",
+                "homepage": "https://antoniocarlosribeiro.com",
+                "role": "Creator"
+            }
+        ],
+        "description": "Laravel Illuminate Agnostic Str",
+        "homepage": "https://github.com/antonioribeiro/ia-str",
+        "keywords": [
+            "helpers",
+            "laravel",
+            "pragmarx",
+            "str",
+            "string"
+        ]
+    },
+    {
+        "name": "proteusthemes/wp-content-importer-v2",
+        "version": "v2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/proteusthemes/WordPress-Importer.git",
+            "reference": "7414ce1bfb56a8be780c520ed63e99cac7ac403b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/proteusthemes/WordPress-Importer/zipball/7414ce1bfb56a8be780c520ed63e99cac7ac403b",
+            "reference": "7414ce1bfb56a8be780c520ed63e99cac7ac403b",
+            "shasum": ""
+        },
+        "time": "2018-04-13T07:31:18+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ProteusThemes\\WPContentImporter2\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Primoz Cigler",
+                "email": "primoz@proteusnet.com"
+            },
+            {
+                "name": "Gregor Capuder",
+                "email": "capuderg@gmail.com"
+            },
+            {
+                "name": "Humanmade contributors",
+                "homepage": "https://github.com/humanmade/WordPress-Importer/graphs/contributors"
+            }
+        ],
+        "description": "Improved WP content importer used in OCDI plugin and MerlinWP.",
+        "keywords": [
+            "content",
+            "import",
+            "proteusthemes",
+            "theme",
+            "wordpress",
+            "wp"
+        ]
+    },
+    {
+        "name": "sebastian/comparator",
+        "version": "3.0.3",
+        "version_normalized": "3.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/comparator.git",
+            "reference": "1071dfcef776a57013124ff35e1fc41ccd294758"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/1071dfcef776a57013124ff35e1fc41ccd294758",
+            "reference": "1071dfcef776a57013124ff35e1fc41ccd294758",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1",
+            "sebastian/diff": "^3.0",
+            "sebastian/exporter": "^3.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^8.5"
+        },
+        "time": "2020-11-30T08:04:30+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            },
+            {
+                "name": "Jeff Welch",
+                "email": "whatthejeff@gmail.com"
+            },
+            {
+                "name": "Volker Dusch",
+                "email": "github@wallbash.com"
+            },
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@2bepublished.at"
+            }
+        ],
+        "description": "Provides the functionality to compare PHP values for equality",
+        "homepage": "https://github.com/sebastianbergmann/comparator",
+        "keywords": [
+            "comparator",
+            "compare",
+            "equality"
+        ]
+    },
+    {
+        "name": "sebastian/diff",
+        "version": "3.0.3",
+        "version_normalized": "3.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/diff.git",
+            "reference": "14f72dd46eaf2f2293cbe79c93cc0bc43161a211"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/14f72dd46eaf2f2293cbe79c93cc0bc43161a211",
+            "reference": "14f72dd46eaf2f2293cbe79c93cc0bc43161a211",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7.5 || ^8.0",
+            "symfony/process": "^2 || ^3.3 || ^4"
+        },
+        "time": "2020-11-30T07:59:04+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            },
+            {
+                "name": "Kore Nordmann",
+                "email": "mail@kore-nordmann.de"
+            }
+        ],
+        "description": "Diff implementation",
+        "homepage": "https://github.com/sebastianbergmann/diff",
+        "keywords": [
+            "diff",
+            "udiff",
+            "unidiff",
+            "unified diff"
+        ]
+    },
+    {
+        "name": "sebastian/exporter",
+        "version": "3.1.4",
+        "version_normalized": "3.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/exporter.git",
+            "reference": "0c32ea2e40dbf59de29f3b49bf375176ce7dd8db"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/0c32ea2e40dbf59de29f3b49bf375176ce7dd8db",
+            "reference": "0c32ea2e40dbf59de29f3b49bf375176ce7dd8db",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0",
+            "sebastian/recursion-context": "^3.0"
+        },
+        "require-dev": {
+            "ext-mbstring": "*",
+            "phpunit/phpunit": "^8.5"
+        },
+        "time": "2021-11-11T13:51:24+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            },
+            {
+                "name": "Jeff Welch",
+                "email": "whatthejeff@gmail.com"
+            },
+            {
+                "name": "Volker Dusch",
+                "email": "github@wallbash.com"
+            },
+            {
+                "name": "Adam Harvey",
+                "email": "aharvey@php.net"
+            },
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            }
+        ],
+        "description": "Provides the functionality to export PHP variables for visualization",
+        "homepage": "http://www.github.com/sebastianbergmann/exporter",
+        "keywords": [
+            "export",
+            "exporter"
+        ]
+    },
+    {
+        "name": "sebastian/recursion-context",
+        "version": "3.0.1",
+        "version_normalized": "3.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/recursion-context.git",
+            "reference": "367dcba38d6e1977be014dc4b22f47a484dac7fb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/367dcba38d6e1977be014dc4b22f47a484dac7fb",
+            "reference": "367dcba38d6e1977be014dc4b22f47a484dac7fb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.0"
+        },
+        "time": "2020-11-30T07:34:24+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sebastian@phpunit.de"
+            },
+            {
+                "name": "Jeff Welch",
+                "email": "whatthejeff@gmail.com"
+            },
+            {
+                "name": "Adam Harvey",
+                "email": "aharvey@php.net"
+            }
+        ],
+        "description": "Provides functionality to recursively process PHP variables",
+        "homepage": "http://www.github.com/sebastianbergmann/recursion-context"
+    },
+    {
+        "name": "symfony/dotenv",
+        "version": "v4.4.36",
+        "version_normalized": "4.4.36.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/dotenv.git",
+            "reference": "15a389dd8d1764565543ca063db2857940d3f00d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/dotenv/zipball/15a389dd8d1764565543ca063db2857940d3f00d",
+            "reference": "15a389dd8d1764565543ca063db2857940d3f00d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.3"
+        },
+        "require-dev": {
+            "symfony/process": "^3.4.2|^4.0|^5.0"
+        },
+        "time": "2021-12-16T21:17:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Dotenv\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Registers environment variables from a .env file",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "dotenv",
+            "env",
+            "environment"
+        ]
+    },
+    {
+        "name": "symfony/inflector",
+        "version": "v4.4.34",
+        "version_normalized": "4.4.34.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/inflector.git",
+            "reference": "cbbde60aa3aa2e7ea51830fd590b6151615c57bc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/inflector/zipball/cbbde60aa3aa2e7ea51830fd590b6151615c57bc",
+            "reference": "cbbde60aa3aa2e7ea51830fd590b6151615c57bc",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.3",
+            "symfony/polyfill-ctype": "~1.8",
+            "symfony/polyfill-php80": "^1.16"
+        },
+        "time": "2021-10-29T15:39:54+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Inflector\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Bernhard Schussek",
+                "email": "bschussek@gmail.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Converts words between their singular and plural forms (English only)",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "inflection",
+            "pluralize",
+            "singularize",
+            "string",
+            "symfony",
+            "words"
+        ],
+        "abandoned": "use `EnglishInflector` from the String component instead"
+    },
+    {
+        "name": "symfony/polyfill-php72",
+        "version": "v1.23.0",
+        "version_normalized": "1.23.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php72.git",
+            "reference": "9a142215a36a3888e30d0a9eeea9766764e96976"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9a142215a36a3888e30d0a9eeea9766764e96976",
+            "reference": "9a142215a36a3888e30d0a9eeea9766764e96976",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "time": "2021-05-27T09:17:38+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.23-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php72\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/polyfill-php80",
+        "version": "v1.23.1",
+        "version_normalized": "1.23.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php80.git",
+            "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/1100343ed1a92e3a38f9ae122fc0eb21602547be",
+            "reference": "1100343ed1a92e3a38f9ae122fc0eb21602547be",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1"
+        },
+        "time": "2021-07-28T13:41:28+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-main": "1.23-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Php80\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ],
+            "classmap": [
+                "Resources/stubs"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ion Bazan",
+                "email": "ion.bazan@gmail.com"
+            },
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "symfony/property-access",
+        "version": "v4.4.36",
+        "version_normalized": "4.4.36.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/property-access.git",
+            "reference": "21c6c7a887e5b514c3decaa42d406a1f9ed92641"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/property-access/zipball/21c6c7a887e5b514c3decaa42d406a1f9ed92641",
+            "reference": "21c6c7a887e5b514c3decaa42d406a1f9ed92641",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.3",
+            "symfony/inflector": "^3.4|^4.0|^5.0",
+            "symfony/polyfill-php80": "^1.16"
+        },
+        "require-dev": {
+            "symfony/cache": "^3.4|^4.0|^5.0"
+        },
+        "suggest": {
+            "psr/cache-implementation": "To cache access methods."
+        },
+        "time": "2021-12-11T14:17:37+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\PropertyAccess\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Provides functions to read and write from/to an object or array using a simple string notation",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "access",
+            "array",
+            "extraction",
+            "index",
+            "injection",
+            "object",
+            "property",
+            "property path",
+            "reflection"
+        ]
+    },
+    {
+        "name": "symfony/var-dumper",
+        "version": "v4.4.36",
+        "version_normalized": "4.4.36.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/var-dumper.git",
+            "reference": "02685c62fcbc4262235cc72a54fbd45ab719ce3c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/var-dumper/zipball/02685c62fcbc4262235cc72a54fbd45ab719ce3c",
+            "reference": "02685c62fcbc4262235cc72a54fbd45ab719ce3c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.1.3",
+            "symfony/polyfill-mbstring": "~1.0",
+            "symfony/polyfill-php72": "~1.5",
+            "symfony/polyfill-php80": "^1.16"
+        },
+        "conflict": {
+            "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+            "symfony/console": "<3.4"
+        },
+        "require-dev": {
+            "ext-iconv": "*",
+            "symfony/console": "^3.4|^4.0|^5.0",
+            "symfony/process": "^4.4|^5.0",
+            "twig/twig": "^1.43|^2.13|^3.0.4"
+        },
+        "suggest": {
+            "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+            "ext-intl": "To show region name in time zone dump",
+            "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+        },
+        "time": "2021-12-29T09:28:53+00:00",
+        "bin": [
+            "Resources/bin/var-dump-server"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "Resources/functions/dump.php"
+            ],
+            "psr-4": {
+                "Symfony\\Component\\VarDumper\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Provides mechanisms for walking through any arbitrary PHP variable",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "debug",
+            "dump"
+        ]
+    },
+    {
+        "name": "voku/portable-ascii",
+        "version": "1.5.6",
+        "version_normalized": "1.5.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/voku/portable-ascii.git",
+            "reference": "80953678b19901e5165c56752d087fc11526017c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/voku/portable-ascii/zipball/80953678b19901e5165c56752d087fc11526017c",
+            "reference": "80953678b19901e5165c56752d087fc11526017c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0"
+        },
+        "suggest": {
+            "ext-intl": "Use Intl for transliterator_transliterate() support"
+        },
+        "time": "2020-11-12T00:07:28+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "voku\\": "src/voku/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Lars Moelleken",
+                "homepage": "http://www.moelleken.org/"
+            }
+        ],
+        "description": "Portable ASCII library - performance optimized (ascii) string functions for php.",
+        "homepage": "https://github.com/voku/portable-ascii",
+        "keywords": [
+            "ascii",
+            "clean",
+            "php"
+        ]
+    },
+    {
+        "name": "wolfcast/browser-detection",
+        "version": "2.9.5",
+        "version_normalized": "2.9.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Wolfcast/BrowserDetection.git",
+            "reference": "88cfc2d1b19de8fea19854da4cfa67e5bd5d9ecb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Wolfcast/BrowserDetection/zipball/88cfc2d1b19de8fea19854da4cfa67e5bd5d9ecb",
+            "reference": "88cfc2d1b19de8fea19854da4cfa67e5bd5d9ecb",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2020-02-02T13:47:48+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lib/BrowserDetection.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Alexandre Valiquette",
+                "homepage": "https://wolfcast.com/",
+                "role": "Lead developer"
+            }
+        ],
+        "description": "The Wolfcast BrowserDetection PHP class facilitates the identification of the user's environment such as Web browser, version, platform family, platform version or if it's a mobile device or not.",
+        "homepage": "https://github.com/Wolfcast/BrowserDetection",
+        "keywords": [
+            "browser",
+            "detection",
+            "environment",
+            "mobile",
+            "platform",
+            "version"
+        ]
+    }
+]

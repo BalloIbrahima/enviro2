@@ -1,0 +1,65 @@
+{
+	"name": "kubio/hero",
+	"category": "kubio-layout",
+	"supports": {
+		"kubio": {
+			"appearanceEffect": true,
+			"elementsEnum": {
+				"INLINE_SCRIPT": "inlineScript"
+			},
+			"elementsByName": {
+				"inner": {
+					"props": {
+						"className": [
+							"h-navigation-padding",
+							"h-section-grid-container"
+						]
+					}
+				},
+				"inlineScript": {
+					"tag": "<>"
+				}
+			},
+			"default": {
+				"props": {
+					"downArrow": {
+						"enabled": false
+					},
+					"showHeader": false,
+					"overlapSection": false
+				}
+			},
+			"template": {
+				"type": "element",
+				"props": {
+					"name": "outer"
+				},
+				"children": [
+					{
+						"type": "background"
+					},
+					{
+						"type": "separators"
+					},
+					{
+						"type": "element",
+						"props": {
+							"name": "inner"
+						},
+						"children": [
+							{
+								"type": "element",
+								"props": {
+									"name": "inlineScript"
+								}
+							},
+							{
+								"type": "wp:InnerBlocks"
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

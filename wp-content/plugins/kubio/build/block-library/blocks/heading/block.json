@@ -1,0 +1,98 @@
+{
+	"name": "kubio/heading",
+	"category": "kubio-basic",
+	"attributes": {
+		"kubio": {
+			"type": "object"
+		},
+		"link": {
+			"type": "object",
+			"default": {
+				"typeOpenLink": "sameWindow"
+			}
+		},
+		"content": {
+			"type": "string",
+			"source": "html",
+			"default": "My heading is awesome"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"kubio": {
+			"appearanceEffect": true,
+			"default": {
+				"style": {
+					"descendants": {
+						"svgShape": {
+							"stroke": {
+								"width": {
+									"value": 8,
+									"unit": "px"
+								},
+								"color": "#000000"
+							}
+						}
+					}
+				},
+				"props": {
+					"fancy": {
+						"fancyWord": "awesome",
+						"fancyRotatingWords": "beautiful\namazing\nimpressive",
+						"typeStyle": "none",
+						"typeShape": "curly",
+						"typeAnimation": "rotate-1",
+						"bringToFront": false,
+						"useRoundedEdges": false,
+						"animationDuration": {
+							"value": 1,
+							"unit": "s"
+						},
+						"type": {
+							"animationDuration": {
+								"in": {
+									"value": 0.1,
+									"unit": "s"
+								},
+								"out": {
+									"value": 0.1,
+									"unit": "s"
+								}
+							}
+						}
+					}
+				}
+			},
+			"elementsEnum": {
+				"TEXT": "text",
+				"SVG": "svgShape"
+			},
+			"elementsByName": {
+				"text": {
+					"selector": "p.wp-block.wp-block-kubio-heading__text, h1.wp-block.wp-block-kubio-heading__text, h2.wp-block.wp-block-kubio-heading__text, h3.wp-block.wp-block-kubio-heading__text, h4.wp-block.wp-block-kubio-heading__text, h5.wp-block.wp-block-kubio-heading__text, h6.wp-block.wp-block-kubio-heading__text",
+					"selectorPrepend": true,
+					"default": true,
+					"wrapper": true,
+					"useBlockProps": false
+				},
+				"svgShape": {
+					"selector": ".text-wrapper-fancy svg path"
+				}
+			},
+			"template": {
+				"type": "LinkWrapper",
+				"props": {
+					"heading": true
+				},
+				"children": [
+					{
+						"type": "element",
+						"props": {
+							"name": "text"
+						}
+					}
+				]
+			}
+		}
+	}
+}

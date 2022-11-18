@@ -1,0 +1,39 @@
+{
+	"name": "core/latest-comments",
+	"kubioSupport": {
+		"elementsEnum": {
+			"WIDGET_BOX": "widget-box",
+			"WIDGET_LINK": "widget-link",
+			"WIDGET_ALIGN_HOLDER": "widget-align",
+			"WIDGET_DATE": "widget-date",
+			"WIDGET_EXCERPT": "widget-excerpt",
+			"WIDGET_AVATAR": "widget-avatar"
+		},
+		"elementsByName": {
+			"widget-box": {
+				"default": true,
+				"wrapper": true
+			},
+			"widget-link": {
+				"selector": "a",
+				"usePrefix": true
+			},
+			"widget-date": {
+				"selector": "time",
+				"usePrefix": true
+			},
+			"widget-excerpt": {
+				"selector": "&.wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p",
+				"usePrefix": true
+			},
+			"widget-avatar": {
+				"selector": "&.wp-block-latest-comments .wp-block-latest-comments__comment-avatar",
+				"usePrefix": true
+			},
+			"widget-align": {
+				"selector": "&.wp-block-latest-comments",
+				"usePrefix": true
+			}
+		}
+	}
+}
